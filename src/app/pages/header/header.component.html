@@ -1,0 +1,28 @@
+<div class="main-header" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+        </button>
+        
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="active">Visualize</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Compare</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Configure</a>
+                </li>
+            </ul>
+        </div>
+       
+        
+        <a class="navbar-brand main-header__logo" >
+            <img src="../../../assets/images/logo.png" alt="Toyota Motor North America" title="Toyota Motor North America" />
+        </a>
+        
+    </nav>
+</div>
+<sub-nav></sub-nav>

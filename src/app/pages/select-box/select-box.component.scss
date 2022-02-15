@@ -1,0 +1,74 @@
+h1{
+    font-size: 18px;
+    color: #aaa;
+    padding: 0;
+    margin: 0;
+}
+
+.select-box{
+    max-width: 1280px;
+    margin: auto;
+}
+.select-box ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.select-box ul li{
+    width: 20%;
+    padding: 1rem;
+}
+.select-box ul li .box{
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.select-box ul li .dropdown{
+    width: 100%;
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown{
+   width: 100%; 
+   background: #9f9f9f;
+   color: #fff;
+   text-align: center;
+   border-radius: 0;
+   border:1px solid #9f9f9f;
+}
+::ng-deep .select-box ul li .dropdown .p-inputtext{
+    font-size: 0.8rem;
+    padding: 3px 0;
+    color: #fff;
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown .p-dropdown-label.p-placeholder,
+::ng-deep .select-box ul li .dropdown .p-dropdown .p-dropdown-clear-icon{
+    color: #fff;
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown .p-dropdown-trigger{
+    color: #fff;
+    align-items: flex-start;
+}
+::ng-deep .select-box ul li .dropdown .pi{
+    font-size: 0.9rem;
+}
+::ng-deep .select-box ul li .dropdown .pi.pi-chevron-down:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f0dd";
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown-panel{
+    font-size: 0.8rem;
+    text-align: left;
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown-panel .p-dropdown-items .p-dropdown-item{
+    border-bottom: 1px solid #ebebeb;
+    padding: 0.3rem 1rem;
+}
+::ng-deep .select-box ul li .dropdown .p-dropdown-panel .p-dropdown-items:not(.p-dropdown-virtualscroll){
+    padding: 0;
+}

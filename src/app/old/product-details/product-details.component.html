@@ -1,0 +1,337 @@
+
+<div class="content-container">
+  <section>
+    <mat-tab-group class="testing-encapsulation" animationDuration="0" (selectedTabChange)="changeProjectTab()" [(selectedIndex)]="selectedProjectIndex">
+      <mat-tab label="Heading A"> </mat-tab>
+      <mat-tab label="Heading B"></mat-tab>
+      <mat-tab label="Heading C"> </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group mat-align-tabs="start" (selectedTabChange)="changeProjectTab()" [(selectedIndex)]="selectedProjectIndex">
+      <mat-tab label="Sub Heading A"></mat-tab>
+      <mat-tab label="Sub Heading B"></mat-tab>
+      <mat-tab label="Sub Heading C"></mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group class="testing-encapsulations" mat-align-tabs="start">
+      <mat-tab label="All"></mat-tab>
+    </mat-tab-group>
+  </section>
+
+
+  <div class="container-fluid">
+    <div>
+      <label>Filter 1</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">Select</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Filter 2</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">ABCDEFGH</option>
+      </select>
+    </div>
+    <div>
+      <label>Header</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">Content</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 3</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 4</label><br />
+      <select class="mat-card">
+        <option value="0">All</option>
+        <option value="0">Option AA</option>
+        <option value="0">Option BB</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 5</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 6</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 7</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 8</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 9</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 10</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 11</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+    <div>
+      <label>Filter 12</label><br />
+      <select class="mat-card" disabled>
+        <option value="0">All</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container">
+        <div class="card text-muted">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <h1 class="card-title text-capitalize">PRODUCT 1</h1>
+            <table>
+              <tr>
+                <td>Filter 1 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;A</td>
+              </tr>
+              <tr>
+                <td>Filter 2 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;B</td>
+              </tr>
+              <tr>
+                <td>Filter 3 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;C</td>
+              </tr>
+              <tr>
+                <td>Filter 4 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;D</td>
+              </tr>
+              <tr>
+                <td>Filter 5 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;E</td>
+              </tr>
+              <tr>
+                <td>Filter 6 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;F</td>
+              </tr>
+              <tr>
+                <td>Filter 7 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;G</td>
+              </tr>
+              <tr>
+                <td>Filter 8 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;H</td>
+              </tr>
+              <tr>
+                <td>Filter 9 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;I</td>
+              </tr>
+            </table>
+            <button type="button"  class="mt-3"  mat-raised-button color="warn">Select & Build</button>
+          </div>
+        </div>
+        <div class="card text-muted">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <h1 class="card-title text-capitalize">PRODUCT 2</h1>
+            <table>
+              <tr>
+                <td>Filter 1 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;J</td>
+              </tr>
+              <tr>
+                <td>Filter 2 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;K</td>
+              </tr>
+              <tr>
+                <td>Filter 3 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;L</td>
+              </tr>
+              <tr>
+                <td>Filter 4 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;M</td>
+              </tr>
+              <tr>
+                <td>Filter 5 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;N</td>
+              </tr>
+              <tr>
+                <td>Filter 6 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;O</td>
+              </tr>
+              <tr>
+                <td>Filter 7 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;P</td>
+              </tr>
+              <tr>
+                <td>Filter 8 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;Q</td>
+              </tr>
+              <tr>
+                <td>Filter 9 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;R</td>
+              </tr>
+            </table>
+            <button type="button"  class="mt-3" mat-raised-button color="warn">Select & Build</button>
+
+          </div>
+        </div>
+        <div class="card text-muted">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <h1 class="card-title text-capitalize">PRODUCT 3</h1>
+            <table>
+              <tr>
+                <td>Filter 1 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;S</td>
+              </tr>
+              <tr>
+                <td>Filter 2 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;T</td>
+              </tr>
+              <tr>
+                <td>Filter 3 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;U</td>
+              </tr>
+              <tr>
+                <td>Filter 4 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;V</td>
+              </tr>
+              <tr>
+                <td>Filter 5 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;W</td>
+              </tr>
+              <tr>
+                <td>Filter 6 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;X</td>
+              </tr>
+              <tr>
+                <td>Filter 7 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;Y</td>
+              </tr>
+              <tr>
+                <td>Filter 8 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;Z</td>
+              </tr>
+              <tr>
+                <td>Filter 9 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;A</td>
+              </tr>
+            </table>
+            <button type="button" class="mt-3" mat-raised-button color="warn">Select & Build</button>
+
+          </div>
+        </div>
+        <div class="card text-muted">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <h1 class="card-title text-capitalize ">PRODUCT 4</h1>
+            <table>
+              <tr>
+                <td>Filter 1 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;A</td>
+              </tr>
+              <tr>
+                <td>Filter 2 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;B</td>
+              </tr>
+              <tr>
+                <td>Filter 3 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;C</td>
+              </tr>
+              <tr>
+                <td>Filter 4 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;D</td>
+              </tr>
+              <tr>
+                <td>Filter 5 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;E</td>
+              </tr>
+              <tr>
+                <td>Filter 6 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;F</td>
+              </tr>
+              <tr>
+                <td>Filter 7 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;G</td>
+              </tr>
+              <tr>
+                <td>Filter 8 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;H</td>
+              </tr>
+              <tr>
+                <td>Filter 9 &nbsp;&nbsp;&nbsp;</td>
+                <td>:</td>
+                <td>&nbsp;I</td>
+              </tr>
+            </table>
+            <button type="button" class="mt-3" mat-raised-button color="warn">Select & Build</button>
+
+          </div>
+        </div>
+      </div>
+  <div class="bottom-content">
+    <div class="pagination">
+      <a>&laquo;</a>
+      <a>1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>4</a>
+      <a>5</a>
+      <a>6</a>
+      <a>&raquo;</a>
+    </div>
+  </div>
+
+</div>
+

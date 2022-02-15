@@ -1,0 +1,89 @@
+@import '../../../assets/settings/color-palette';
+@import '../../../assets/settings/breakpoints';
+@import '../../../assets/settings/mediaquery';
+@import '../../../assets/settings/buttons';
+
+
+.navbar{
+    padding:0px;
+    
+    &-nav{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+            padding: 0px;
+            width:240px;
+            text-align: center;
+            a{
+                color: $color-secondary;
+                // @include primary;
+                display: block;
+                padding: 13px 60px;
+                font-weight: 500;
+                font: normal normal 600 14px/28px Toyota Type;
+                @include mq-breakpoint-xxl{
+                    padding: 22px 30px;
+                }
+                &:hover{
+                    text-decoration: none;
+                    @include primary; 
+                }
+                &.active{
+                    @include primary;
+                }
+            }
+        }
+    }
+}
+.navbar-expand-lg .navbar-collapse{
+    margin-top: 0px;
+}
+.main-header{
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    background-color: $color-white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    width: 100%;
+    padding:0px;
+    transition: opacity .25s ease-out, height .15s ease;
+    @include mq-breakpoint-xxl{
+        height: 70px;
+    }
+    &__logo{
+        text-align: right;
+        margin-right: 0;
+        padding: 0px 0;
+        @include primary;
+        @include mq-breakpoint-xxl{
+            padding: 10px 0;
+        }
+        img{
+            max-width: 160px;
+            width: 100%;
+            height: 54px;
+        }
+    }
+    .navbar-toggler{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        font-size: 25px;
+        color: #626262;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.sticky {
+    position: fixed;
+    display: block;
+    z-index: 9999;
+    height: 48px;
+    opacity: 1;
+    transition: opacity .25s ease-out, height .15s ease;
+  }

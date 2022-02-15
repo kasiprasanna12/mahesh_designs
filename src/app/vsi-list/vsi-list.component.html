@@ -1,0 +1,54 @@
+<div class="main-content">
+    <!-- Header -->
+    <div class="image-content">
+        <img src="assets/images/logo.png" alt="logo" class="img" align="right">
+    </div><br><br><br>
+
+    <!-- Card Listing -->
+<!-- Dialouge box Start-->
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+<p-dialog header="Add Car Family Code" [(visible)]="displayModal" [modal]="true" [style]="{width: '41vw'}"
+    [draggable]="false" [resizable]="false">
+    
+        <div class="content-section">
+            <p>Please enter a new car family code</p>
+            <input type="text" pInputText /> 
+            <!-- <span class="p-ml-2">{{value1}}</span> -->
+            <div class="max-char">
+                <div class="max-icon">
+                    <span class="pi pi-check"></span>
+                </div>
+                <div class="text">
+                    Maximum 4 char
+                </div>
+            </div>
+        </div>
+        <ng-template pTemplate="footer">
+            <p-button (click)="displayModal=false" label="Cancel" styleClass="p-button-text"></p-button>
+            <p-button (click)="displayModal=false" label="Add" styleClass="p-button-text add"></p-button>
+        </ng-template>
+    </p-dialog>
+<!-- Dialouge Box ends -->
+    <div class="body-content">
+        <p>Select Car Family Code & VSI Version</p>
+        <div class="cards">
+            <div class="card" *ngFor="let product of productList">
+                <div class="card-body align-items-center d-flex justify-content-center" (click)="move(product)" 
+                [ngStyle]="{'cursor':product.selectedValue == 'VSI Version #' ? '':'pointer'}">
+                    {{product.name}}
+                </div>
+
+                <div class="dropdown">
+                    <div class="dropdown-select  align-items-center d-flex justify-content-center" (click)="select(product)"
+                     [ngStyle]="{'background':product.selectedValue == 'VSI Version #' ? '':'#0A0808 0% 0% no-repeat padding-box'}">
+                        {{product.selectedValue}}
+                        <i class="fa fa-caret-down icon" [ngStyle]="{'transform':product.selectedValue == 'VSI Version #' ? 'translateX(63px)':'translateX(36px)'}"></i>
+                    </div>
+                    <div class="dropdown-list" *ngIf="product.viewValue">
+                        <div class="dropdown-list__item" *ngFor="let sel of product.select" (click)="changeValue(product,sel)">{{sel.option}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@import '../../assets/settings/color-palette';
+@import '../../assets/settings/breakpoints';
+@import '../../assets/settings/mediaquery';
+@import '../../assets/settings/mixins';
+
+
+.main-container{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+    font-family: "Toyota Type";
+}

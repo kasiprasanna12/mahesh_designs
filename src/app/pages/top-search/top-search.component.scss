@@ -1,0 +1,75 @@
+@import '../../../assets/settings/color-palette';
+@import '../../../assets/settings/breakpoints';
+@import '../../../assets/settings/mediaquery';
+@import '../../../assets/settings/mixins';
+@import '../../../assets/settings/buttons';
+@import '../../../assets/settings/global';
+
+
+.top-search-section{
+    margin:30px 30px;
+    .items-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+       
+        .item{
+            margin: 0px 3px;
+            min-width: 78px;
+            .label{
+                color: $color-secondary;
+                // font-size: 13px;
+                // font-weight: 500;
+                font: normal normal 600 12px/23px Toyota Type;
+            }
+            &.w-md{
+                min-width: 120px;
+            }
+            &.w-lg{
+                min-width: 180px;
+            }
+            ::ng-deep{
+                .p-dropdown{
+                    width: 100%;
+                    .p-dropdown-clear-icon{
+                        display: none;
+                    }
+                    .p-dropdown-label{
+                        font-size: 13px;
+                        padding: 5px;
+                        color: $color-black;
+                        &.p-placeholder{
+                            color: $color-black;
+                        }
+                    }
+                    .p-dropdown-trigger{
+                        width: 1.5rem;
+                    }
+                }
+                .p-dropdown-panel {
+                    .p-dropdown-items {
+                        .p-dropdown-item{
+                            font-size: 13px;
+                            padding: 0.2rem 1rem;
+                            color: $color-black;
+                            &:not(.p-highlight){
+                                &:not(.p-disabled):hover{
+                                    background: $color-black;
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .pi {
+                    font-size: 10px;
+                }
+                // .p-dropdown .p-dropdown-panel{
+                //     min-width: 130px;
+                // }
+            }
+        }
+    }
+}
+

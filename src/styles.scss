@@ -1,0 +1,13 @@
+@import 'assets/settings/color-palette'; 
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+/* body { margin: 0; font-family: 'Montserrat', Roboto, "Helvetica Neue", sans-serif; } */
+a{ text-decoration: none;}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@font-face {
+    font-family: "Toyota Type";
+    src: local("Toyota Type"), url(./assets/fonts/ToyotaType-Regular_0.ttf) format("truetype");
+}
+

@@ -1,0 +1,54 @@
+
+.article{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 864px;
+}
+select{
+  border: none;
+}
+.container-fluid{
+  display: flex;
+  justify-content: space-around;
+  margin-top:20px;
+}
+
+.mat-card{
+  width:100px;
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  padding:20px;
+}
+.card-body {
+  flex-direction: column;
+}
+.bottom-content{
+  text-align: center;
+  margin-top: 25px;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+
+
+

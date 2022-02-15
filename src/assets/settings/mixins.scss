@@ -1,0 +1,12 @@
+@import '../../assets/settings/color-palette';
+@import '../../assets/settings/breakpoints';
+@import '../../assets/settings/mediaquery';
+
+@mixin primary() {
+    color: $color-white;
+    background: $color-primary;
+}
+
+@mixin secondary() {
+    color: $color-white;
+}

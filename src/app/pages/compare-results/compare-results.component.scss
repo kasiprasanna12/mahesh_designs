@@ -1,0 +1,58 @@
+@import '../../../assets/settings/color-palette';
+@import '../../../assets/settings/breakpoints';
+@import '../../../assets/settings/mediaquery';
+@import '../../../assets/settings/mixins';
+@import '../../../assets/settings/buttons';
+@import '../../../assets/settings/global';
+
+
+.compare-results-section{
+    margin:50px auto;
+    display: flex;
+    align-items: stretch;
+    width: 90%;
+    flex-wrap: wrap;
+    .item{
+        border:1px solid $color-grey;
+        width: 23%;
+        padding: 20px;
+        margin: 1%;
+        background: $color-white;
+        &:hover{
+            box-shadow: 7px 11px 21px -3px rgba(0,0,0,0.31);
+            -webkit-box-shadow: 7px 11px 21px -3px rgba(0,0,0,0.31);
+            -moz-box-shadow: 7px 11px 21px -3px rgba(0,0,0,0.31);
+        }
+        .head-title{
+            font-size: 25px;
+            text-align: center;
+            padding: 0 0 15px 0;
+            text-transform: uppercase;
+            color:$color-secondary;
+        }
+        .grid{
+            font-size: 14px;
+            color:$color-secondary;
+            width: 90%;
+            margin: auto auto 20px auto;
+            height: calc(100% - 100px);
+            table{
+                width: 100%;
+                td{
+                    padding: 5px;
+                    &:first-child{
+                        width: 45%;
+                    }
+                    &:last-child{
+                        width: 45%;
+                    }
+                }
+            }
+        }
+        button{
+            margin: auto;
+            display: block;
+        }
+    }
+}
+

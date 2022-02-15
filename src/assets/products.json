@@ -1,0 +1,169 @@
+{
+    "data":[
+    {
+        "id":"1",
+        "name": "787W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":false
+    },
+    {
+        "id":"2",
+        "name": "903W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"3",
+        "name": "852W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"4",
+        "name": "832W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"5",
+        "name": "811W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"6",
+        "name": "885W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"7",
+        "name": "870W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"8",
+        "name": "853W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"9",
+        "name": "798W PHV",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"10",
+        "name": "806W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"11",
+        "name": "886W (HV)",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"12",
+        "name": "840W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"13",
+        "name": "831W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"14",
+        "name": "861W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    },
+    {
+        "id":"15",
+        "name": "788W",
+        "select":[
+            {"option":"B0011778 | 2021/10/15","value":1},
+            {"option":"B0011778 | 2021/09/15","value":2},
+            {"option":"B0011778 | 2021/08/15","value":3},
+            {"option":"B0011778 | 2021/09/15","value":4}
+        ],
+        "disable":true
+    }
+    ]
+}
