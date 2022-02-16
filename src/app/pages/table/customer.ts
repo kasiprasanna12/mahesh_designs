@@ -1,22 +1,19 @@
 export interface Country {
-    name?: string;
-    code?: string;
+    item?: string;
+    detail?: string;
 }
 
 export interface Representative {
-    name?: string;
-    image?: string;
+    item?: string;
+    detail?: string;
 }
 
 export interface Customer {
-    id?: number;
-    name?: string;
-    country?: Country;
-    company?: string;
-    date?: string | Date;
-    status?: string;
-    activity?: number;
-    representative?: Representative;
-    verified?: boolean;
-    balance?: boolean;
+    item?: string | number;
+    detail?: string;
+    itemdescription?: string;
+    detailtype?: string;
+    detaildescription?: string | Date;
+    setcondition?: string;
+    table?: number;
 }

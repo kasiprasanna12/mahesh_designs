@@ -13,6 +13,8 @@ import { FormsModule} from '@angular/forms';
 import { EntryComponent } from './entry/entry.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { HeaderSubNavComponent } from './pages/header/sub-nav/sub-nav.component';
+import { TopBandComponent } from './pages/header/top-band/top-band.component';
+import { NavUnclassifiedComponent } from './pages/header/nav-unclassified/nav-unclassified.component';
 import { TopSearchComponent } from './pages/top-search/top-search.component';
 import { CompareResultsComponent } from './pages/compare-results/compare-results.component';
 import { SelectBoxComponent } from './pages/select-box/select-box.component';
@@ -38,6 +40,8 @@ import { ButtonModule } from 'primeng/button'
     HeaderComponent,
     HeaderSubNavComponent,
     EntryComponent,
+    TopBandComponent,
+    NavUnclassifiedComponent,
     TopSearchComponent,
     CompareResultsComponent,
     SelectBoxComponent,

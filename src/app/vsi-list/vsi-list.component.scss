@@ -165,107 +165,109 @@ div.dropdown-list__item:last-child {
           }
       }
   }
-  .content-section{
-      padding: 40px;
-      min-height: 350px;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-weight: 400;
-      p{
-          font-size: 16px;
-          color: #000000;
-          margin-bottom: 0;
-      }
-      ::ng-deep{
-          .p-inputtext {
-              width: 100%;
-              border: 0;
-              border-bottom: 1px solid #666768;
-              border-radius: 0;
-              color: #000000;
-              font-size: 20px;
-              &:focus{
-                  border: 0;
-                  outline: none;
-              }
-          }
-      }
-      .max-char{
-          display: flex;
-          margin: 20px 0 0 0;
-          .max-icon{
-              width: 21px;
-              height: 21px;
-              background: #C3C4C4;
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              color: #ffffff;
-              margin-right: 10px;
-              border-radius: 100%;
-              .pi-check{
-                  font-size: 12px;
-              }
-          }
-          .text{
-              color: #000000;
-              font-size: 16px;
-          }
-      }
-  }
-  ::ng-deep{
-      .p-dialog{
-          background: #ffffff;
-          border-radius: 0;
-          .p-dialog-header{
-              justify-content: center;
-              padding: 0px;
-              border-top-right-radius: 0;
-              border-top-left-radius: 0;
-              .p-dialog-title{
-                  display: block;
-                  text-align: center;
-                  width: calc(100% - 60px);
-                  font-family: 'Source Sans Pro', sans-serif;
-                  font-size: 36px;
-                  color: #000000;
-                  padding-top: 40px;
-              }
-              .p-dialog-header-icon{
-                  background: #5D5A5A;
-                  color: #ffffff;
-                  .pi{
-                      font-size: 14px;
-                  }
-              }
-          }
-          .p-dialog-header-icons{
-              width: 32px;
-          }
-          .p-dialog-content{
-              background: none;
-          }
-          .p-dialog-footer{
-              border-bottom-right-radius: 0px;
-              border-bottom-left-radius: 0px;
-              text-align: center;
-              button {
-                  min-width: 230px;
-                  border: 1px solid #D7181E;
-                  color: #D7181E;
-                  border-radius: 0;
-                  margin: 0 8px;
-                  &.add{
-                      color: #ffffff;
-                      background: #D7181E;
-                  }
-              }
-          }
-      }
-  }
-
+ 
 }
 
-
+.main-content{
+    .content-section{
+        padding: 40px;
+        min-height: 350px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        p{
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 0;
+        }
+        ::ng-deep{
+            .p-inputtext {
+                width: 100%;
+                border: 0;
+                border-bottom: 1px solid #666768;
+                border-radius: 0;
+                color: #000000;
+                font-size: 20px;
+                &:focus{
+                    border: 0;
+                    outline: none;
+                }
+            }
+        }
+        .max-char{
+            display: flex;
+            margin: 20px 0 0 0;
+            .max-icon{
+                width: 21px;
+                height: 21px;
+                background: #C3C4C4;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                margin-right: 10px;
+                border-radius: 100%;
+                .pi-check{
+                    font-size: 12px;
+                }
+            }
+            .text{
+                color: #000000;
+                font-size: 16px;
+            }
+        }
+    }
+    ::ng-deep{
+        .p-dialog{
+            background: #ffffff;
+            border-radius: 0;
+            .p-dialog-header{
+                justify-content: center;
+                padding: 0px;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                .p-dialog-title{
+                    display: block;
+                    text-align: center;
+                    width: calc(100% - 60px);
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-size: 36px;
+                    color: #000000;
+                    padding-top: 40px;
+                }
+                .p-dialog-header-icon{
+                    background: #5D5A5A;
+                    color: #ffffff;
+                    .pi{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .p-dialog-header-icons{
+                width: 32px;
+            }
+            .p-dialog-content{
+                background: none;
+            }
+            .p-dialog-footer{
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                text-align: center;
+                padding: 0 1.5rem 2.5rem 1.5rem;
+                button {
+                    min-width: 230px;
+                    border: 1px solid #D7181E;
+                    color: #D7181E;
+                    border-radius: 0;
+                    margin: 0 8px;
+                    &.add{
+                        color: #ffffff;
+                        background: #D7181E;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

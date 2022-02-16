@@ -1,5 +1,37 @@
+@import '../../../assets/settings/color-palette';
+@import '../../../assets/settings/breakpoints';
+@import '../../../assets/settings/mediaquery';
+@import '../../../assets/settings/buttons';
+
+
+
 .table-box{
-    max-width: 1280px;
+    // max-width: 1280px;
+    width: 100%;
     margin: auto;
     font-size: 13px;
+    ::ng-deep{
+        .p-datatable .p-datatable-thead > tr > th{
+            font-size: 20px;
+            color: $color-black;
+            font-family: "Toyota Type";
+            font-weight: 600;
+        }
+        .p-datatable .p-datatable-tbody > tr > td{
+            font-size: 16px;
+            color: $color-black;
+            font-family: "Toyota Type";
+            .standard{
+                font-weight: 600
+                ;
+                &-s{
+                    color: $color-green;
+                }
+                &-p{
+                    color: $color-blue;
+                }
+            }
+            
+        }
+    }
 }

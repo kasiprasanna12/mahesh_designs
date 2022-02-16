@@ -12,16 +12,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
        
         .item{
             margin: 0px 3px;
             min-width: 78px;
+            width: 100%;
             .label{
                 color: $color-secondary;
-                // font-size: 13px;
-                // font-weight: 500;
-                font: normal normal 600 12px/23px Toyota Type;
+                font-size: 13px;
+                font-weight: 600;
+                margin-bottom: 5px;
             }
             &.w-md{
                 min-width: 120px;

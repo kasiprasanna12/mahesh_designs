@@ -24,14 +24,16 @@ import { MainContainerComponent } from './main-container/main-container.componen
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'prefix' },
-  {
-    path: 'main', component: MainContainerComponent, children: [
-      { path: '', redirectTo: 'vsi-list', pathMatch: 'prefix' },
-      { path: 'vsi-list', component: VSIListComponent },
-      { path: 'entry', component: EntryComponent }
-    ]
-  },
+  { path: '', redirectTo: '/entry', pathMatch: 'full' },
+  { path: 'entry', component: EntryComponent }
+  // {
+  //   path: 'main', component: MainContainerComponent, children: [
+  //     { path: '', redirectTo: 'vsi-list', pathMatch: 'prefix' },
+  //     { path: 'entry', component: EntryComponent },
+  //     { path: 'vsi-list', component: VSIListComponent },
+      
+  //   ]
+  // },
 ];
 
 @NgModule({

@@ -1,0 +1,111 @@
+@import '../../../../assets/settings/color-palette';
+@import '../../../../assets/settings/breakpoints';
+@import '../../../../assets/settings/mediaquery';
+@import '../../../../assets/settings/buttons';
+
+
+.nav-unclassified{
+    background-color: $color-black;
+    width: 100%;
+    // padding-top: 50px;
+    transition: opacity .25s ease-out, height .15s ease;
+    @include mq-breakpoint-xxl{
+        // padding-top: 70px;
+    }
+    .navbar{
+        padding:0px;
+        
+        &-nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li{
+                padding: 0px;
+                width: 100%;
+                white-space: nowrap;
+                a{
+                    color: $color-white;
+                    display: block;
+                    padding: 0px ;
+                    min-height: 69px;
+                    padding-top: 3px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    text-decoration: none;
+                    text-align: center;
+                    border-bottom: 5px solid $color-black;
+                    @include mq-breakpoint-xxl{
+                        // padding: 0px 30px;
+                        font-size: 14px;
+                    }
+                   
+                    &:hover{
+                        text-decoration: none;
+                        border-bottom: 5px solid $color-yellow;
+                    }
+                    &.active{
+                        background: $color-white;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $color-black;
+                        border-bottom: 5px solid $color-yellow;
+                        @include mq-breakpoint-xxl{
+                            // padding: 0px 30px;
+                            font-size: 18px;
+                        }
+                    }
+                    &.search-btn{
+                        background: $color-yellow;
+                        border-bottom: 0;
+                        width: 85px;
+                        .pi-search{
+                            color: $color-white;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                &:last-child{
+                    width: 85px;
+                }
+                div{
+                    &:first-child{
+                        font-size: 16px;
+                        font-weight: 500;
+                        padding-bottom: 5px;
+                        @include mq-breakpoint-xxl{
+                            // padding: 0px 30px;
+                            font-size: 18px;
+                        }
+                    }
+                    &:last-child{
+                        font-size: 12px;
+                        line-height: 17px;
+                        font-weight: normal;
+                        @include mq-breakpoint-xxl{
+                            // padding: 0px 30px;
+                            font-size: 12px;
+                        }
+                    }
+                    &.unclassified{
+                        font-size: 14px;
+                        padding-bottom: 0;
+                        @include mq-breakpoint-xxl{
+                            // padding: 0px 30px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
