@@ -5,7 +5,7 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-vsi-list',
   templateUrl: './vsi-list.component.html',
-  styleUrls: ['./vsi-list.component.css']
+  styleUrls: ['./vsi-list.component.scss']
 })
 export class VSIListComponent implements OnInit {
 
