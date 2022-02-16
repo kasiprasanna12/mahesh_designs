@@ -34,6 +34,7 @@ import { VSIListComponent } from './vsi-list/vsi-list.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button'
+import { CheckboxModule } from 'primeng/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +65,7 @@ import { ButtonModule } from 'primeng/button'
     MatButtonModule,
     DropdownModule,
     InputTextModule,
+    CheckboxModule,
     TableModule,
     DialogModule,
     ButtonModule,

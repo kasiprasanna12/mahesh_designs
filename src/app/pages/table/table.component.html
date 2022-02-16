@@ -1,12 +1,20 @@
 <div class="table-box">
-    <p-table [value]="customers" [scrollable]="true" scrollHeight="400px">
+
+    <div class="items-list">
+        <h4>Select items to add to configure your grade</h4>
+        <div class="save-section">
+            <button class="save-btn">Save Selection</button>
+        </div>
+    </div>
+
+    <p-table [value]="customers" [scrollable]="true" scrollHeight="500px">
         <ng-template pTemplate="header">
             <tr>
-                <th style="width:50px"></th>
+                <th style="width:50px"><i class="p-sortable-column-icon pi pi-fw pi-sort-amount-down"></i></th>
                 <th style="width:80px">Item</th>
                 <th style="width:100px">Details</th>
                 <th style="min-width:300px">Item Description</th>
-                <th style="width:180px">Detail Type</th>
+                <th style="width:160px">Detail Type</th>
                 <th>Detail Description</th>
                 <th style="width:300px">Set Condition</th>
                 <th style="width:150px">Table</th>
@@ -14,15 +22,77 @@
         </ng-template>
         <ng-template pTemplate="body" let-customer>
             <tr>
-                <td style="width:50px"></td>
-                <td style="width:80px">{{customer.item}}</td>
-                <td style="width:100px">{{customer.detail}}</td>
-                <td style="min-width:300px">{{customer.itemdescription}}</td>
-                <td style="width:180px"><span class="standard-s">{{customer.detailtype}}</span></td>
-                <td>{{customer.detaildescription}}</td>
-                <td style="width:300px">{{customer.setcondition}}</td>
-                <td style="width:150px">{{customer.table}}</td>
+                <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:160px"><span class="standard-s">S-Standard</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
             </tr>
+            <tr>
+                <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
+            </tr>
+            <tr>
+                <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"><p-dropdown [options]="cities" placeholder="5 Set Conditions" optionLabel="name"
+                    [showClear]="true"></p-dropdown></td>
+                <td style="width:150px"><a href="#">0578</a></td>
+            </tr>
+            <tr>
+                <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
+            </tr>
+            <tr>
+                <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
+            </tr>
+            <tr>
+                <td style="width:50px"></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
+            </tr>
+            <tr>
+                <td style="width:50px"></td>
+                <td style="width:80px">A1B</td>
+                <td style="width:100px">B</td>
+                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td>FR:2, RR:3</td>
+                <td style="width:300px"></td>
+                <td style="width:150px"></td>
+            </tr>
+            
         </ng-template>
     </p-table>
 </div>

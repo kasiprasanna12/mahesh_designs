@@ -8,6 +8,7 @@
     background-color: $color-black;
     width: 100%;
     // padding-top: 50px;
+    border-top:1px solid #ccc;
     transition: opacity .25s ease-out, height .15s ease;
     @include mq-breakpoint-xxl{
         // padding-top: 70px;

@@ -9,18 +9,66 @@
     // max-width: 1280px;
     width: 100%;
     margin: auto;
-    font-size: 13px;
+    font-size: 12px;
+    padding: 0 20px;
+    @include mq-breakpoint-xxl{
+        padding: 0 40px;
+        font-size: 13px;
+    }
+    .items-list{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        align-items: center;
+        h4{
+            font-size: 18px;
+            color:$color-black;
+            font-family: "Toyota Type";
+            @include mq-breakpoint-xxl{
+                font-size: 22px;
+            }
+        }
+        .save-section{
+            button{
+                font-family: "Toyota Type";
+                &.save-btn{
+                    background: $color-grey-light;
+                    color: $color-white;
+                    padding: 0px 40px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: normal;
+                    height: 40px;
+                }
+            }
+        }
+    }
     ::ng-deep{
         .p-datatable .p-datatable-thead > tr > th{
-            font-size: 20px;
+            font-size: 17px;
             color: $color-black;
             font-family: "Toyota Type";
             font-weight: 600;
+            padding: 1rem 0.2rem;
+            @include mq-breakpoint-xxl{
+                font-size: 20px;
+                padding: 1rem;
+            }
+            i{
+                font-size: 25px;
+                color: $color-grey-light;
+            }
         }
         .p-datatable .p-datatable-tbody > tr > td{
             font-size: 16px;
             color: $color-black;
             font-family: "Toyota Type";
+            padding: 1rem 0.2rem;
+            @include mq-breakpoint-xxl{
+                font-size: 20px;
+                padding: 1rem;
+            }
             .standard{
                 font-weight: 600
                 ;
@@ -31,7 +79,32 @@
                     color: $color-blue;
                 }
             }
-            
+            &:nth-child(4){
+                text-transform: uppercase;
+            }
+            a{
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            ::ng-deep{
+                .p-dropdown{
+                    width: 100%;
+                    border: 4px solid $color-yellow;
+                    .p-dropdown-label{
+                        color: $color-black;
+                        &.p-placeholder{
+                            color: $color-black;
+                        }
+                    }
+                }
+                .p-checkbox{
+                    .p-checkbox-box{
+                        border: 1px solid $color-secondary;
+                    }
+                }
+            }
         }
     }
 }
