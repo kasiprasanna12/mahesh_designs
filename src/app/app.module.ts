@@ -35,6 +35,7 @@ import { MainContainerComponent } from './main-container/main-container.componen
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button'
 import { CheckboxModule } from 'primeng/checkbox';
+import {SidebarModule} from 'primeng/sidebar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +64,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     HttpClientModule,
     MatTabsModule,
     MatButtonModule,
+    SidebarModule,
     DropdownModule,
     InputTextModule,
     CheckboxModule,

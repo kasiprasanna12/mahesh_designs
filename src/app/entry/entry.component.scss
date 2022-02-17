@@ -6,7 +6,8 @@
 
 .main-container{
     position: relative;
-    z-index: 1;
+    // z-index: 1;
     padding-bottom: 50px;
     font-family: "Toyota Type";
+    width: calc(100% - 43px);
 }

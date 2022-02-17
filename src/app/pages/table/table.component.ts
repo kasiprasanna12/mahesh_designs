@@ -19,6 +19,7 @@ export class TableComponent implements OnInit {
   cities: City[];
   selectedCity1: City | undefined;
   checked: boolean = false;
+  myselection: any;
   constructor(private customerService: CustomerService) { 
     this.cities = [
       {name: 'New York'},

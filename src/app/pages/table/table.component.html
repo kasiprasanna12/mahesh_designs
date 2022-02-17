@@ -1,5 +1,4 @@
 <div class="table-box">
-
     <div class="items-list">
         <h4>Select items to add to configure your grade</h4>
         <div class="save-section">
@@ -92,7 +91,64 @@
                 <td style="width:300px"></td>
                 <td style="width:150px"></td>
             </tr>
-            
         </ng-template>
     </p-table>
 </div>
+<div class="my-selection">
+    <div class="selection">
+<p-button type="button" class="my-selection-btn" (click)="myselection = true" icon="pi pi-arrow-left"><span class="txt">My Selection</span></p-button>
+</div>
+</div>
+<p-sidebar [(visible)]="myselection" position="right" [baseZIndex]="10000">
+    <div class="slide-container">
+        <div class="slide-icon">1</div>
+        <div class="slide-content">
+            <h3>My Selection</h3>
+            <div class="fields-section">
+                <ul>
+                    <li>
+                        <label>Car Family Code</label>
+                        <label class="lf">7878W</label>
+                    </li>
+                    <li>
+                        <label>Version</label>
+                        <label class="lf">B0011778 | 2021/10/15</label>
+                    </li>
+                    <li>
+                        <label>Katashiki</label>
+                        <label class="lf">VXKA70L-CRUSZA</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="table-grid">
+                <p-table [value]="customers" [scrollable]="true" scrollHeight="500px">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th style="width:50px"></th>
+                            <th style="width:80px">Item</th>
+                            <th style="width:100px">Detail</th>
+                            <th>Item Description</th>
+                            <th style="width:220px">Detail Description</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-customer>
+                        <tr>
+                            <td style="width:50px"><i class="pi pi-trash"></i></td>
+                            <td style="width:80px">A4B</td>
+                            <td style="width:100px">I</td>
+                            <td>Body Color</td>
+                            <td style="width:220px">W/O</td>
+                        </tr>
+                        <tr>
+                            <td style="width:50px"><i class="pi pi-trash"></i></td>
+                            <td style="width:80px">A4B</td>
+                            <td style="width:100px">I</td>
+                            <td>Body Color</td>
+                            <td style="width:220px">W/O</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</p-sidebar>
