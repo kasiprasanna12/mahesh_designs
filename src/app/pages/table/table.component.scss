@@ -38,20 +38,24 @@
                     padding: 0px 40px;
                     display: flex;
                     align-items: center;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: normal;
-                    height: 40px;
+                    height: 30px;
+                    @include mq-breakpoint-xxl{
+                        height: 40px;
+                        font-size: 20px;
+                    }
                 }
             }
         }
     }
     ::ng-deep{
         .p-datatable .p-datatable-thead > tr > th{
-            font-size: 15px;
+            font-size: 14px;
             color: $color-black;
             font-family: "Toyota Type";
             font-weight: 600;
-            padding: 1rem 1rem;
+            padding: 1rem 0.5rem;
             @include mq-breakpoint-xxl{
                 font-size: 20px;
                 padding: 1rem;
@@ -59,6 +63,43 @@
             i{
                 font-size: 25px;
                 color: $color-grey-light;
+            }
+            .search-content{
+                display: flex;
+                white-space: nowrap;
+                align-items: center;
+                .search {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    margin-left: 15px;
+                    .searchTerm {
+                        width: 100%;
+                        border: 1px solid $color-grey-light;
+                        border-right: none;
+                        padding: 2px 3px;
+                        height: 30px;
+                        border-radius: 0px;
+                        outline: none;
+                        font-size: 12px;
+                    }
+                    .searchButton {
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 30px;
+                        padding: 0;
+                        border: 0px solid #9FA0A0;
+                        background: #9FA0A0;
+                        border-radius: 0;
+                        cursor: pointer;
+                        .pi-search{
+                            color: #fff;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
             }
         }
         .p-datatable .p-datatable-tbody > tr > td{
@@ -93,7 +134,8 @@
                 .p-dropdown,
                 .p-multiselect{
                     width: 100%;
-                    border: 4px solid $color-yellow;
+                    border: 3px solid $color-yellow;
+                    font-size: 0.85rem;
                     .p-dropdown-label{
                         color: $color-black;
                         &.p-placeholder{
@@ -101,9 +143,18 @@
                         }
                     }
                 }
+                .p-multiselect-item{
+                    font-size: 0.85rem;
+                    padding: 0.3rem 1rem;
+                }
                 .p-checkbox{
+                    align-items: center;
+                    width: 16px;
+                    height: 16px;
                     .p-checkbox-box{
                         border: 1px solid $color-secondary;
+                        width: 16px;
+                        height: 16px;
                     }
                 }
             }

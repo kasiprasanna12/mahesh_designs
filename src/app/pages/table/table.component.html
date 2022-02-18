@@ -10,91 +10,101 @@
         <ng-template pTemplate="header">
             <tr>
                 <th style="width:50px"><i class="p-sortable-column-icon pi pi-fw pi-sort-amount-down"></i></th>
-                <th style="width:80px">Item</th>
-                <th style="width:80px">Details</th>
-                <th style="min-width:380px">Item Description</th>
-                <th style="width:160px">Detail Type</th>
+                <th style="width:70px">Item</th>
+                <th style="width:70px">Details</th>
+                <th style="width:320px">
+                    <div class="search-content">
+                    Item Description
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="Search Item">
+                            <button type="submit" class="searchButton">
+                                <i class="pi pi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+                <th style="width:140px">Detail Type</th>
                 <th>Detail Description</th>
-                <th style="width:300px">Set Condition</th>
-                <th style="width:150px">Table</th>
+                <th style="width:230px">Set Condition</th>
+                <th style="width:90px">Table</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-customer>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
-                <td style="width:80px">A1B</td>
-                <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:160px"><span class="standard-s">S-Standard</span></td>
+                <td style="width:70px">A1B</td>
+                <td style="width:70px">B</td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px">
+                <td style="width:230px">
                     <p-multiSelect [options]="cities" defaultLabel="Select" optionLabel="name">
                     </p-multiSelect>
                 </td>
-                <td style="width:150px"></td>
+                <td style="width:90px"></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
-                <td style="width:150px"></td>
+                <td style="width:230px"></td>
+                <td style="width:90px"></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-p">P1-Optional</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px">
+                <td style="width:230px">
                     <p-multiSelect [options]="cities" defaultLabel="Select" optionLabel="name">
                     </p-multiSelect>
                 </td>
-                <td style="width:150px"><a href="#">0578</a></td>
+                <td style="width:90px"><a href="#">0578</a></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-p">P1-Optional</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
-                <td style="width:150px"></td>
+                <td style="width:230px"></td>
+                <td style="width:90px"></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
-                <td style="width:150px"></td>
+                <td style="width:230px"></td>
+                <td style="width:90px"></td>
             </tr>
             <tr>
                 <td style="width:50px"></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
-                <td style="width:150px"></td>
+                <td style="width:230px"></td>
+                <td style="width:90px"></td>
             </tr>
             <tr>
                 <td style="width:50px"></td>
                 <td style="width:80px">A1B</td>
                 <td style="width:80px">B</td>
-                <td style="min-width:380px">Number of Passenger</td>
-                <td style="width:180px"><span class="standard-s">S-Standard</span></td>
+                <td style="width:320px">Number of Passenger</td>
+                <td style="width:140px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
-                <td style="width:150px"></td>
+                <td style="width:230px"></td>
+                <td style="width:90px"></td>
             </tr>
         </ng-template>
     </p-table>
