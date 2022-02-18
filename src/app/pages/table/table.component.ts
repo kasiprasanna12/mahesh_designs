@@ -6,6 +6,10 @@ import {MessageService} from 'primeng/api';
 interface City {
   name: string
 }
+interface Country {
+  name: string,
+  code: string
+}
 
 @Component({
   selector: 'app-table',
@@ -17,10 +21,13 @@ export class TableComponent implements OnInit {
 
   customers: any;
   cities: City[];
-  selectedCity1: City | undefined;
+
   checked: boolean = false;
   myselection: any;
+
+
   constructor(private customerService: CustomerService) { 
+    
     this.cities = [
       {name: 'New York'},
       {name: 'Rome'},

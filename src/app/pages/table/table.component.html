@@ -6,13 +6,13 @@
         </div>
     </div>
 
-    <p-table [value]="customers" [scrollable]="true" scrollHeight="500px">
+    <p-table [value]="customers">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width:50px"><i class="p-sortable-column-icon pi pi-fw pi-sort-amount-down"></i></th>
                 <th style="width:80px">Item</th>
-                <th style="width:100px">Details</th>
-                <th style="min-width:300px">Item Description</th>
+                <th style="width:80px">Details</th>
+                <th style="min-width:380px">Item Description</th>
                 <th style="width:160px">Detail Type</th>
                 <th>Detail Description</th>
                 <th style="width:300px">Set Condition</th>
@@ -23,18 +23,21 @@
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:160px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"></td>
+                <td style="width:300px">
+                    <p-multiSelect [options]="cities" defaultLabel="Select" optionLabel="name">
+                    </p-multiSelect>
+                </td>
                 <td style="width:150px"></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
                 <td style="width:300px"></td>
@@ -43,19 +46,21 @@
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
                 <td>FR:2, RR:3</td>
-                <td style="width:300px"><p-dropdown [options]="cities" placeholder="5 Set Conditions" optionLabel="name"
-                    [showClear]="true"></p-dropdown></td>
+                <td style="width:300px">
+                    <p-multiSelect [options]="cities" defaultLabel="Select" optionLabel="name">
+                    </p-multiSelect>
+                </td>
                 <td style="width:150px"><a href="#">0578</a></td>
             </tr>
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-p">P1-Optional</span></td>
                 <td>FR:2, RR:3</td>
                 <td style="width:300px"></td>
@@ -64,8 +69,8 @@
             <tr>
                 <td style="width:50px"><p-checkbox [(ngModel)]="checked" inputId="binary"></p-checkbox></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
                 <td style="width:300px"></td>
@@ -74,8 +79,8 @@
             <tr>
                 <td style="width:50px"></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
                 <td style="width:300px"></td>
@@ -84,8 +89,8 @@
             <tr>
                 <td style="width:50px"></td>
                 <td style="width:80px">A1B</td>
-                <td style="width:100px">B</td>
-                <td style="min-width:300px">Number of Passenger</td>
+                <td style="width:80px">B</td>
+                <td style="min-width:380px">Number of Passenger</td>
                 <td style="width:180px"><span class="standard-s">S-Standard</span></td>
                 <td>FR:2, RR:3</td>
                 <td style="width:300px"></td>
@@ -94,61 +99,63 @@
         </ng-template>
     </p-table>
 </div>
-<div class="my-selection">
-    <div class="selection">
-<p-button type="button" class="my-selection-btn" (click)="myselection = true" icon="pi pi-arrow-left"><span class="txt">My Selection</span></p-button>
-</div>
-</div>
-<p-sidebar [(visible)]="myselection" position="right" [baseZIndex]="10000">
-    <div class="slide-container">
-        <div class="slide-icon">1</div>
-        <div class="slide-content">
-            <h3>My Selection</h3>
-            <div class="fields-section">
-                <ul>
-                    <li>
-                        <label>Car Family Code</label>
-                        <label class="lf">7878W</label>
-                    </li>
-                    <li>
-                        <label>Version</label>
-                        <label class="lf">B0011778 | 2021/10/15</label>
-                    </li>
-                    <li>
-                        <label>Katashiki</label>
-                        <label class="lf">VXKA70L-CRUSZA</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="table-grid">
-                <p-table [value]="customers" [scrollable]="true" scrollHeight="500px">
-                    <ng-template pTemplate="header">
-                        <tr>
-                            <th style="width:50px"></th>
-                            <th style="width:80px">Item</th>
-                            <th style="width:100px">Detail</th>
-                            <th>Item Description</th>
-                            <th style="width:220px">Detail Description</th>
-                        </tr>
-                    </ng-template>
-                    <ng-template pTemplate="body" let-customer>
-                        <tr>
-                            <td style="width:50px"><i class="pi pi-trash"></i></td>
-                            <td style="width:80px">A4B</td>
-                            <td style="width:100px">I</td>
-                            <td>Body Color</td>
-                            <td style="width:220px">W/O</td>
-                        </tr>
-                        <tr>
-                            <td style="width:50px"><i class="pi pi-trash"></i></td>
-                            <td style="width:80px">A4B</td>
-                            <td style="width:100px">I</td>
-                            <td>Body Color</td>
-                            <td style="width:220px">W/O</td>
-                        </tr>
-                    </ng-template>
-                </p-table>
-            </div>
+<div class="slide-panel">
+    <div class="my-selection">
+        <div class="selection">
+            <p-button type="button" class="my-selection-btn" (click)="myselection = true" icon="pi pi-chevron-left"><span class="txt">My Selection</span></p-button>
         </div>
     </div>
-</p-sidebar>
+    <p-sidebar [(visible)]="myselection" position="right" [baseZIndex]="10000">
+        <div class="slide-container">
+            <div class="slide-icon"><span class="pi pi-chevron-right"></span></div>
+            <div class="slide-content">
+                <h3>My Selection</h3>
+                <div class="fields-section">
+                    <ul>
+                        <li>
+                            <label>Car Family Code</label>
+                            <label class="lf">7878W</label>
+                        </li>
+                        <li>
+                            <label>Version</label>
+                            <label class="lf">B0011778 | 2021/10/15</label>
+                        </li>
+                        <li>
+                            <label>Katashiki</label>
+                            <label class="lf">VXKA70L-CRUSZA</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table-grid">
+                    <p-table [value]="customers" [scrollable]="true" scrollHeight="500px">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th style="width:50px"></th>
+                                <th style="width:80px">Item</th>
+                                <th style="width:100px">Detail</th>
+                                <th>Item Description</th>
+                                <th style="width:220px">Detail Description</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-customer>
+                            <tr>
+                                <td style="width:50px"><i class="pi pi-trash"></i></td>
+                                <td style="width:80px">A4B</td>
+                                <td style="width:100px">I</td>
+                                <td>Body Color</td>
+                                <td style="width:220px">W/O</td>
+                            </tr>
+                            <tr>
+                                <td style="width:50px"><i class="pi pi-trash"></i></td>
+                                <td style="width:80px">A4B</td>
+                                <td style="width:100px">I</td>
+                                <td>Body Color</td>
+                                <td style="width:220px">W/O</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+        </div>
+    </p-sidebar>
+</div>

@@ -10,7 +10,7 @@
     width: 100%;
     margin: auto;
     font-size: 12px;
-    padding: 0 40;
+    padding: 0 40px;
     @include mq-breakpoint-xxl{
         padding: 0;
         width: 95%;
@@ -47,11 +47,11 @@
     }
     ::ng-deep{
         .p-datatable .p-datatable-thead > tr > th{
-            font-size: 17px;
+            font-size: 15px;
             color: $color-black;
             font-family: "Toyota Type";
             font-weight: 600;
-            padding: 1rem 0.2rem;
+            padding: 1rem 1rem;
             @include mq-breakpoint-xxl{
                 font-size: 20px;
                 padding: 1rem;
@@ -62,10 +62,10 @@
             }
         }
         .p-datatable .p-datatable-tbody > tr > td{
-            font-size: 16px;
+            font-size: 14px;
             color: $color-black;
             font-family: "Toyota Type";
-            padding: 1rem 0.2rem;
+            padding: 1rem 1rem;
             @include mq-breakpoint-xxl{
                 font-size: 20px;
                 padding: 1rem;
@@ -90,7 +90,8 @@
                 }
             }
             ::ng-deep{
-                .p-dropdown{
+                .p-dropdown,
+                .p-multiselect{
                     width: 100%;
                     border: 4px solid $color-yellow;
                     .p-dropdown-label{
@@ -127,17 +128,18 @@
             right: 0;
             -ms-transform: rotate(90deg); /* IE 9 */
                 transform: rotate(90deg);
-            top:100px;
+            top:120px;
         }
     }
     ::ng-deep{
         button{
             &.p-button{
+                position: relative;
                 width: auto;
                 height: auto;
                 color: #FFFFFF;
                 font-size: 20px;
-                padding: 10px 30px;
+                padding: 10px 30px 10px 20px;
                 border-radius: 0;
                 display: block;
                 background: none;
@@ -146,91 +148,117 @@
             }
             span{
                 &.txt{
-                    
                     white-space: nowrap;
+                    padding: 0 10px;
+                }
+                &.pi{
+                    transform: rotate(-90deg);
+                    left: 0px;
+                    position: absolute;
                 }
             }
         }
     }
 }
-.slide-container{
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    .slide-icon{
-        width: 30px;
-    }
-    .slide-content{
-        width: calc(100% - 30px);
-        h3{
-            font-size: 20px;
-            color: $color-secondary;
+.slide-panel{
+    .slide-container{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        .slide-icon{
+            width: 25px;
+            span{
+                &.pi-chevron-right{
+                    margin-top: 8px;
+                    color: $color-primary;
+                }
+            }
         }
-        .fields-section{
-            ul{
-                display: flex;
-                list-style: none;
-                padding: 0;
-                margin: 0;
+        .slide-content{
+            width: calc(100% - 30px);
+            h3{
+                font-size: 22px;
+                color: $color-secondary;
                 font-family: "Toyota Type";
-                li{
-                    padding-right: 50px;
-                    label{
-                        display: block;
-                        font-size: 12px;
+            }
+            .fields-section{
+                ul{
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    font-family: "Toyota Type";
+                    li{
+                        padding-right: 50px;
+                        label{
+                            display: block;
+                            font-size: 12px;
+                            font-family: "Toyota Type";
+                            color: $color-secondary;
+                            &.lf{
+                                padding: 0 0 0 10px;
+                                color: $color-black;
+                            }
+                        }
+
+                    }
+                }
+            }
+            .table-grid{
+                margin-top: 15px;
+                ::ng-deep{
+                    .p-datatable .p-datatable-thead > tr > th{
+                        font-size: 15px;
+                        color: $color-black;
                         font-family: "Toyota Type";
-                        color: $color-secondary;
-                        &.lf{
-                            padding: 0 0 0 10px;
-                            color: $color-black;
+                        font-weight: 600;
+                        padding: 1rem 1rem;
+                        @include mq-breakpoint-xxl{
+                            font-size: 20px;
+                            padding: 1rem;
+                        }
+                        i{
+                            font-size: 25px;
+                            color: $color-grey-light;
                         }
                     }
+                    .p-datatable .p-datatable-tbody > tr > td{
+                        font-size: 14px;
+                        color: $color-black;
+                        font-family: "Toyota Type";
+                        padding: 1rem 1rem;
+                        @include mq-breakpoint-xxl{
+                            font-size: 20px;
+                            padding: 1rem;
+                        }
+                        &:nth-child(4){
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    ::ng-deep{
+        .p-sidebar{
+            &-right{
+                width: 50rem !important;
+                top: 90px !important;
+            }
+            &-header{
+                position: absolute;
+                right: 0;
+                z-index: 99;
+                + .p-sidebar-content{
+                    padding: 1rem;
+                }
+            }
+        }
 
-                }
-            }
-        }
-        .table-grid{
-            margin-top: 15px;
-            ::ng-deep{
-                .p-datatable .p-datatable-thead > tr > th{
-                    font-size: 17px;
-                    color: $color-black;
-                    font-family: "Toyota Type";
-                    font-weight: 600;
-                    padding: 1rem 0.2rem;
-                    @include mq-breakpoint-xxl{
-                        font-size: 20px;
-                        padding: 1rem;
-                    }
-                    i{
-                        font-size: 25px;
-                        color: $color-grey-light;
-                    }
-                }
-                .p-datatable .p-datatable-tbody > tr > td{
-                    font-size: 16px;
-                    color: $color-black;
-                    font-family: "Toyota Type";
-                    padding: 1rem 0.2rem;
-                    @include mq-breakpoint-xxl{
-                        font-size: 20px;
-                        padding: 1rem;
-                    }
-                    &:nth-child(4){
-                        text-transform: uppercase;
-                    }
-                }
-            }
-        }
+        .p-sidebar .p-sidebar-header 
+        .p-sidebar-mask.p-component-overlay{
+            background: none;
+        }  
     }
-    
-}
-::ng-deep{
-    .p-sidebar-right{
-        width: 50rem !important;
-        top: 90px !important;
-    }
-    .p-sidebar-mask.p-component-overlay{
-        background: none;
-    }  
 }

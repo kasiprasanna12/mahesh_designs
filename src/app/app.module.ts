@@ -36,6 +36,7 @@ import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button'
 import { CheckboxModule } from 'primeng/checkbox';
 import {SidebarModule} from 'primeng/sidebar';
+import {MultiSelectModule} from 'primeng/multiselect';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import {SidebarModule} from 'primeng/sidebar';
     DropdownModule,
     InputTextModule,
     CheckboxModule,
+    MultiSelectModule,
     TableModule,
     DialogModule,
     ButtonModule,
