@@ -1,214 +1,61 @@
-<div class="compare-results-section">
-    <div class="item">
-        <div class="head-title">VXKA70L-CRULZA</div>
-        <div class="grid">
-            <table>
+<div class="compare-results-section" *ngIf="showCompareResults">
+    <div class="item" *ngFor="let vsi of myArray | filter:pageFilter">
+        <div class="head-title">{{vsi.katashiki}}</div>
+        <div class="grid" >
+            <table >
                 <tr>
                     <td>Semi-Com</td>
                     <td>:</td>
-                    <td>Complete</td>
+                    <td>{{vsi['semi-complete']}}</td>
                 </tr>
                 <tr>
                     <td>DV Train</td>
                     <td>:</td>
-                    <td>2WD</td>
+                    <td>{{vsi.drive_train}}</td>
                 </tr>
                 <tr>
                     <td>Engine</td>
                     <td>:</td>
-                    <td>978F</td>
+                    <td>{{vsi.engine}}</td>
                 </tr>
                 <tr>
                     <td>Whl Base</td>
                     <td>:</td>
-                    <td>3700</td>
+                    <td>{{vsi.wheel_base}}</td>
                 </tr>
                 <tr>
                     <td>Strg Whl</td>
                     <td>:</td>
-                    <td>LHD</td>
+                    <td>{{vsi.steering_wheel}}</td>
                 </tr>
                 <tr>
                     <td>Deck</td>
                     <td>:</td>
-                    <td>6.5FT</td>
+                    <td>{{vsi.deck}}</td>
                 </tr>
                 <tr>
                     <td>Body</td>
                     <td>:</td>
-                    <td>C-CAB</td>
+                    <td>{{vsi.body}}</td>
                 </tr>
                 <tr>
                     <td>T/M</td>
                     <td>:</td>
-                    <td>10AT-F</td>
+                    <td>{{vsi.transmission}}</td>
                 </tr>
                 <tr>
                     <td>Grade</td>
                     <td>:</td>
-                    <td>L-GR</td>
+                    <td>{{vsi.grade}}</td>
                 </tr>
             </table>
         </div>
-        <button class="primary">Select &#38; Build</button>
+        <button class="primary" type="button" (click)="selectbuild(vsi)">Select &#38; Build</button>
     </div>
-    <div class="item">
-        <div class="head-title">VXKA70L-CRULZA</div>
-        <div class="grid">
-            <table>
-                <tr>
-                    <td>Semi-Com</td>
-                    <td>:</td>
-                    <td>Complete</td>
-                </tr>
-                <tr>
-                    <td>DV Train</td>
-                    <td>:</td>
-                    <td>2WD</td>
-                </tr>
-                <tr>
-                    <td>Engine</td>
-                    <td>:</td>
-                    <td>978F</td>
-                </tr>
-                <tr>
-                    <td>Whl Base</td>
-                    <td>:</td>
-                    <td>3700</td>
-                </tr>
-                <tr>
-                    <td>Strg Whl</td>
-                    <td>:</td>
-                    <td>LHD</td>
-                </tr>
-                <tr>
-                    <td>Deck</td>
-                    <td>:</td>
-                    <td>6.5FT</td>
-                </tr>
-                <tr>
-                    <td>Body</td>
-                    <td>:</td>
-                    <td>C-CAB</td>
-                </tr>
-                <tr>
-                    <td>T/M</td>
-                    <td>:</td>
-                    <td>10AT-F</td>
-                </tr>
-                <tr>
-                    <td>Grade</td>
-                    <td>:</td>
-                    <td>S-GR</td>
-                </tr>
-            </table>
-        </div>
-        <button class="primary">Select &#38; Build</button>
-    </div>
-    <div class="item">
-        <div class="head-title">VXKA70L-PSULZA</div>
-        <div class="grid">
-            <table>
-                <tr>
-                    <td>Semi-Com</td>
-                    <td>:</td>
-                    <td>Complete</td>
-                </tr>
-                <tr>
-                    <td>DV Train</td>
-                    <td>:</td>
-                    <td>2WD</td>
-                </tr>
-                <tr>
-                    <td>Engine</td>
-                    <td>:</td>
-                    <td>978F</td>
-                </tr>
-                <tr>
-                    <td>Whl Base</td>
-                    <td>:</td>
-                    <td>3700</td>
-                </tr>
-                <tr>
-                    <td>Strg Whl</td>
-                    <td>:</td>
-                    <td>LHD</td>
-                </tr>
-                <tr>
-                    <td>Deck</td>
-                    <td>:</td>
-                    <td>5.5FT</td>
-                </tr>
-                <tr>
-                    <td>Body</td>
-                    <td>:</td>
-                    <td>D-CAB</td>
-                </tr>
-                <tr>
-                    <td>T/M</td>
-                    <td>:</td>
-                    <td>10AT-F</td>
-                </tr>
-                <tr>
-                    <td>Grade</td>
-                    <td>:</td>
-                    <td>L-GR</td>
-                </tr>
-            </table>
-        </div>
-        <button class="primary">Select &#38; Build</button>
-    </div>
-    <div class="item">
-        <div class="head-title">VXKA70L-PSUSZA</div>
-        <div class="grid">
-            <table>
-                <tr>
-                    <td>Semi-Com</td>
-                    <td>:</td>
-                    <td>Complete</td>
-                </tr>
-                <tr>
-                    <td>DV Train</td>
-                    <td>:</td>
-                    <td>2WD</td>
-                </tr>
-                <tr>
-                    <td>Engine</td>
-                    <td>:</td>
-                    <td>978F</td>
-                </tr>
-                <tr>
-                    <td>Whl Base</td>
-                    <td>:</td>
-                    <td>3700</td>
-                </tr>
-                <tr>
-                    <td>Strg Whl</td>
-                    <td>:</td>
-                    <td>LHD</td>
-                </tr>
-                <tr>
-                    <td>Deck</td>
-                    <td>:</td>
-                    <td>5.5FT</td>
-                </tr>
-                <tr>
-                    <td>Body</td>
-                    <td>:</td>
-                    <td>D-CAB</td>
-                </tr>
-                <tr>
-                    <td>T/M</td>
-                    <td>:</td>
-                    <td>10AT-F</td>
-                </tr>
-                <tr>
-                    <td>Grade</td>
-                    <td>:</td>
-                    <td>S-GR</td>
-                </tr>
-            </table>
-        </div>
-        <button class="primary">Select &#38; Build</button>
-    </div>
+</div>
+
+<div class="bottom-content" *ngIf="katashikiList.length">
+    <i class="fa-solid fa-angle-left" (click)="previous()"></i>
+    {{this.totalCount}}
+    <i class="fa-solid fa-angle-right" (click)="next()"></i>
 </div>

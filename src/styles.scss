@@ -1,13 +1,87 @@
-@import 'assets/settings/color-palette'; 
+@import "assets/settings/color-palette";
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-/* body { margin: 0; font-family: 'Montserrat', Roboto, "Helvetica Neue", sans-serif; } */
-a{ text-decoration: none;}
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-@font-face {
-    font-family: "Toyota Type";
-    src: local("Toyota Type"), url(./assets/fonts/ToyotaType-Regular_0.ttf) format("truetype");
+html,
+body {
+  height: 100%;
 }
+a {
+  text-decoration: none;
+}
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "Toyota Type";
+  src: local("Toyota Type"),
+    url(./assets/fonts/ToyotaType-Regular_0.ttf) format("truetype");
+
+}
+
+@font-face {
+  font-family: "Toyota Type Semibold";
+  src: local("Toyota Type Semibold"),
+    url(./assets/fonts/ToyotaType-Semibold.ttf) format("truetype");
+    
+}
+
+.mat-tab-label {
+  width: 15%;
+  font: normal normal bold 14px/28px Toyota Type;
+}
+
+//first tab
+.testing-encapsulation {
+  width: 100%;
+}
+
+.testing-encapsulation .mat-tab-label{
+  width: 17%;
+}
+
+.testing-encapsulation .mat-tab-label-active {
+  background-color: $color-primary !important;
+  opacity: 1 !important;
+  color: $color-white;
+}
+
+//Second tab
+.tab .mat-tab-label-active {
+  background-color: $color-white !important;
+  opacity: 1 !important;
+  color: $color-black;
+  font-family: "Toyota Type Semibold";
+  font: normal normal 900 13px/28px Toyota Type;
+}
+
+.tab .mat-tab-label{
+  background-color: $color-white !important;
+  opacity: 1 !important;
+  color: $color-black;
+  font-family: "Toyota Type Semibold";
+  font: normal normal 900 13px/28px Toyota Type;
+}
+
+//third tab
+.testing-encapsulations {
+  background-color: #000000 !important;
+  opacity: 1 !important;
+  color: $color-white;
+}
+.testing-encapsulations .mat-tab-label-active {
+  background-color: $color-white !important;
+  opacity: 1 !important;
+  color: $color-black;
+  margin-left: 20px;
+  min-width: 0 !important;
+  padding: 23px 35px;
+  width: 30px;
+  font: normal normal bold 12px/28px Toyota Type;
+}
+//tab commom style
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: $color-primary;
+  height: 4px;
+}
+
 

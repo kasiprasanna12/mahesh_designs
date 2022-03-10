@@ -2,55 +2,68 @@
    <div class="items-list">
       <div class="item w-md">
          <div class="label">Car Family Code</div>
-         <p-dropdown [options]="cities" placeholder="787W" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="carFamilyCode" [placeholder]="CFCIndex" optionLabel="" [showClear]="true" [(ngModel)]="CFCValue"
+         (onChange)="getFilteredVersions('change')"></p-dropdown>
       </div>
       <div class="item w-lg">
          <div class="label">Version</div>
-         <p-dropdown [options]="cities" placeholder="B0011778 | 2021/10/15" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="vsiVersion" [placeholder]="versionIndex" optionLabel="" [showClear]="true" [(ngModel)]="versionValue"
+         (onChange)="changeVersions()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Fuel</div>
-         <p-dropdown [options]="cities" placeholder="Hybrid" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="fuel" [placeholder]="fuelIndex" optionLabel="" [showClear]="true" [(ngModel)]="fuelValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Semi-Com</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="semicom" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="semiValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">DV Train</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="dvTrain" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="dvValue" 
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Engine</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="engine" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="engineValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Whl Base</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="wheelBase" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="baseValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Strg Whl</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="steeringWheel" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="wheelValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Deck</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="deck" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="deckValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Body</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="body" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="bodyValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">T/M</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="transmission" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="tmValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
          <div class="label">Grade</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <p-dropdown [options]="grade" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="gradeValue"
+         (onChange)="select()"></p-dropdown>
       </div>
       <div class="item">
-         <div class="label">Description</div>
-         <p-dropdown [options]="cities" placeholder="All" optionLabel="name" [showClear]="true"></p-dropdown>
+         <div class="label">Destination</div>
+         <p-dropdown [options]="destination" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="destinationValue"
+         (onChange)="select()"></p-dropdown>
       </div>
    </div>
 </div>

@@ -16,6 +16,8 @@
         list-style: none;
         li{
             padding: 0px;
+            width:230px;
+            text-align: center;
             a{
                 color: $color-secondary;
                 // @include primary;
@@ -26,10 +28,10 @@
                     padding: 25px 60px;
                     font-size: 16px;
                 }
-                &:hover{
-                    text-decoration: none;
-                    @include primary;
-                }
+                // &:hover{
+                //     text-decoration: none;
+                //     @include primary;
+                // }
                 &.active{
                     @include primary;
                 }

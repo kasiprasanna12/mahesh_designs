@@ -2,63 +2,63 @@
     <nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav">
             <li>
-                <a href="#" class="active">Overview</a>
+                <a [ngClass]="selectType == 'over' ? 'active' : ''" (click)="classifiedType('over')">Overview</a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'A' ? 'active' : ''" (click)="classifiedType('A')">
                     <div>A</div>
                     <div>Regulation</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'B' ? 'active' : ''" (click)="classifiedType('B')">
                     <div>B</div>
                     <div>Option Pkg/Misc</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'D' ? 'active' : ''" (click)="classifiedType('D')">
                     <div>D,E</div>
                     <div>Drivetrain/Engine</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'G' ? 'active' : ''" (click)="classifiedType('G')">
                     <div>G</div>
                     <div>Chassis</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'J' ? 'active' : ''" (click)="classifiedType('J')">
                     <div>J,K</div>
                     <div>Exterior Body</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'L' ? 'active' : ''" (click)="classifiedType('L')">
                     <div>L</div>
                     <div>Functional Parts/Lights</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'N' ? 'active' : ''" (click)="classifiedType('N')">
                     <div>N,P,R</div>
                     <div>Interior</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'T' ? 'active' : ''" (click)="classifiedType('T')">
                     <div>T,U</div>
                     <div>Audio/Safety/Electronics</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a  [ngClass]="selectType == 'Un' ? 'active' : ''" (click)="classifiedType('Un')">
                     <div class="unclassified">Unclassified</div>
                 </a>
             </li>
             <li>
-                <a href="#" class="search-btn">
+                <a class="search-btn">
                     <div><span class="pi pi-search"></span></div>
                 </a>
             </li>

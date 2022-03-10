@@ -1,0 +1,160 @@
+<div class="icon" align="end">
+    <i class="fa-solid fa-circle-xmark" mat-dialog-close></i>
+</div>
+<h5>Upload VSI / Set Matrix</h5>
+<!-- Stepper -->
+<div class="step-wizard">
+    <div class="step-wizard-list">
+        <div class="step-wizard-item" [ngClass]="count == 0? 'current-item':''">
+            <span class="progress-label">Select Car Family Code</span>
+            <span class="progress-count"></span>
+        </div>
+        <div class="step-wizard-item" [ngClass]="count == 1? 'current-item':''">
+            <span class="progress-label">Enter Version</span>
+            <span class="progress-count"></span>
+        </div>
+        <div class="step-wizard-item" [ngClass]="count == 2? 'current-item':''">
+            <span class="progress-label">Select Document</span>
+            <span class="progress-count"></span>
+        </div>
+        <div class="step-wizard-item" [ngClass]="count == 3? 'current-item':''">
+            <span class="progress-label">Validate and upload</span>
+            <span class="progress-count"></span>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<!-- CFC Dropdown -->
+<div *ngIf="count == 0">
+    <p>To start visualizing, comparing or configuring you need to upload the VSI and Set Matrix. Select the car family code
+        you want to upload the files to and then proceed.</p>
+    <div class="dropdown">
+        <div class="dropdown-select d-flex justify-content-space-between" (click)="change()">
+            Select Car Family Code
+            <i class="fa fa-caret-down icon"></i>
+        </div>
+        <div class="dropdown-list" *ngIf="dropdown">
+            <div class="dropdown-list__item" (click)="select('787W')">787W</div>
+            <div class="dropdown-list__item" (click)="select('787W')">885W</div>
+            <div class="dropdown-list__item" (click)="select('787W')">886W (HV)</div>
+            <div class="dropdown-list__item" (click)="select('787W')">903W</div>
+            <div class="dropdown-list__item" (click)="select('787W')">807W</div>
+        </div>
+    </div> 
+</div>
+
+
+<!-- Version Input -->
+<div *ngIf="count == 1">
+<p>Please enter the version you want to upload you VSI and Set matrix to</p>
+<div class="dropdown">
+    <div class="input-icon-wrap">
+        <input type="text" class="input-with-icon" placeholder="Version Input...">
+        <span class="input-icon">
+            <i class="fa fa-caret-down"></i>
+        </span>
+      </div>  	
+</div> 
+</div>
+
+
+<!-- Browse DOcuments -->
+<div *ngIf="count == 2">
+    <p>Please select the document you want to upload</p>
+<div class="card first">
+    <div class="file-name">VSI</div>
+    <div class="browse">
+        <div class="file">
+            <span>{{isHovering?'Drop the file here':'Drag and Drop File'}}</span>
+            <span>or</span>
+            <span><button type="button" for="file" align="right" (change)="browse($event)">Browse
+               <input type="file" multiple   accept="application/pdf,application/msword,
+               application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+            </button></span>
+        </div>
+    </div>
+    <div class="alert-icon">
+        <i class="fa-solid fa-clock"></i>
+    </div>
+</div>
+
+<div class="card second">
+    <div class="file-name">Set Matrix</div>
+    <div class="browse">
+        <div class="file">
+            <span>{{isHovering?'Drop the file here':'Drag and Drop File'}}</span>
+            <span>or</span>
+            <span><button type="button" for="file" align="right" (change)="browse($event)">Browse
+               <input type="file" multiple   accept="application/pdf,application/msword,
+               application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+            </button></span>
+        </div>
+    </div>
+    <div class="alert-icon">
+        <i class="fa-solid fa-circle-check"></i>
+    </div>
+</div>
+</div>
+
+
+<!-- Approval Status -->
+<div *ngIf="count == 3">
+<p>If your file was not approved the CFC or VSI Version in the file does not match the manually entered value. You will be rerouted to the CFC entry page to restart your upload</p>
+<table class="table">
+    <tbody>
+        <tr>
+            <td></td>
+            <td>Car Family Code</td>
+            <td>VSI Version</td>
+            <td>File Type</td>
+        </tr>
+        <tr>
+            <td>VSI</td>
+            <td>
+                <div class="center-content">
+                    <i class="fa-solid fa-check"></i>Approved
+                </div>
+            </td>
+            <td>
+                <div class="center-content">
+                    <i class="fa-solid fa-check"></i>Approved
+                </div>
+            </td>
+            <td>
+                <div class="center-content">
+                    <i class="fa-solid fa-check"></i>Approved
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Set Matrix</td>
+            <td>
+                <div class="deny">
+                    <i class="fa-solid fa-xmark"></i>Not Approved
+                </div>
+            </td>
+            <td>
+                <div class="deny">
+                    <i class="fa-solid fa-xmark"></i>Not Approved
+                </div>
+            </td>
+            <td>
+                <div class="center-content">
+                    <i class="fa-solid fa-check"></i>Approved
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div> 
+
+<div class="left-btn">
+    <button type="button" (click)="back()" *ngIf="count >=1">Back</button>
+</div>
+<div class="right-btn">
+    <button type="button" (click)="next()" class="enableBtn" >{{count == 3 ? 'Restart':'Next'}}</button>
+</div>
+
+  

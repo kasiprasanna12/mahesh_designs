@@ -1,2 +1,11 @@
-<!-- <div class='card-header text-center text-secondary'>PPS VSI TOOL</div> -->
-<router-outlet></router-outlet>
+<!-- Kattashiki page -->
+<div>
+    <div class="main-container">
+        <div class="sub-nav">
+            <top-band></top-band>
+        </div>
+        <top-search [versionID]="vsiVersion"></top-search>
+
+        <compare-results [versionID]="vsiVersion"></compare-results>
+    </div>
+</div>

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderSubNavComponent implements OnInit {
   
+  selectedProjectIndex:number =0;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeProjectTab() {
+    this.selectedProjectIndex = 0;
   }
 
 }

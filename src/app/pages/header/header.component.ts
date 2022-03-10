@@ -6,6 +6,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  selectedProjectIndex:number =0;
   public isMenuCollapsed = true;
   isSticky: boolean = false;
   @HostListener('window:scroll', ['$event'])
@@ -16,5 +17,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  changeProjectTab() {
+    this.selectedProjectIndex = 0;
+  }
+
 
 }

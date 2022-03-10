@@ -7,7 +7,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 /* Components */
 import { EntryComponent } from './entry/entry.component';
@@ -20,6 +23,7 @@ import { CompareResultsComponent } from './pages/compare-results/compare-results
 import { SelectBoxComponent } from './pages/select-box/select-box.component';
 import { TableComponent } from './pages/table/table.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { NavTabComponent } from './pages/nav-tab/nav-tab.component';
 import { CustomerService } from './pages/table/customerservice';
 
 // import { ProductListComponent } from './product-list/product-list.component';
@@ -32,11 +36,16 @@ import { InputTextModule} from 'primeng/inputtext';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VSIListComponent } from './vsi-list/vsi-list.component';
 import { MainContainerComponent } from './main-container/main-container.component';
-import {DialogModule} from 'primeng/dialog';
+import { DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button'
 import { CheckboxModule } from 'primeng/checkbox';
-import {SidebarModule} from 'primeng/sidebar';
-import {MultiSelectModule} from 'primeng/multiselect';
+import { SidebarModule} from 'primeng/sidebar';
+import { DatePipe } from '@angular/common';
+import { UploadVsiComponent } from './pages/upload-vsi/upload-vsi.component';
+import { MatrixDialogComponent } from './matrix-dialog/matrix-dialog.component';
+import { SelectionTableComponent } from './selection-table/selection-table.component';
+import { FileDropDirective } from './pages/upload-vsi/file-drop.directive';
+import { FilterPipe } from './pages/compare-results/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +60,13 @@ import {MultiSelectModule} from 'primeng/multiselect';
     TableComponent,
     FooterComponent,
     VSIListComponent,
-    MainContainerComponent
+    MainContainerComponent,
+    NavTabComponent,
+    UploadVsiComponent,
+    MatrixDialogComponent,
+    SelectionTableComponent,
+    FileDropDirective,
+    FilterPipe,
     // ProductListComponent,
     // ProductDetailsComponent,
   ],
@@ -62,6 +77,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     BrowserAnimationsModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatTabsModule,
     MatButtonModule,
@@ -69,13 +85,15 @@ import {MultiSelectModule} from 'primeng/multiselect';
     DropdownModule,
     InputTextModule,
     CheckboxModule,
-    MultiSelectModule,
     TableModule,
     DialogModule,
     ButtonModule,
-    NgbModule
+    NgbModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

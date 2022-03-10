@@ -1,41 +1,23 @@
 <div class="main-content">
     <!-- Header -->
     <div class="image-content">
-        <img src="assets/images/logo.png" alt="logo" class="img" align="right">
-    </div><br><br><br>
-
-    <!-- Card Listing -->
-<!-- Dialouge box Start-->
-<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
-<p-dialog header="Add Car Family Code" [(visible)]="displayModal" [modal]="true" [style]="{width: '41vw'}"
-    [draggable]="false" [resizable]="false">
-    
-        <div class="content-section">
-            <p>Please enter a new car family code</p>
-            <input type="text" pInputText /> 
-            <!-- <span class="p-ml-2">{{value1}}</span> -->
-            <div class="max-char">
-                <div class="max-icon">
-                    <span class="pi pi-check"></span>
-                </div>
-                <div class="text">
-                    Maximum 4 char
-                </div>
-            </div>
+        <div>
+            <button type="button" (click)="upload()"><i class="fa-solid fa-arrow-up-from-bracket"></i>Upload VSI</button>
+            <button type="button" (click)="showModalDialog()"><i class="fa-solid fa-plus"></i>Add Car Family Code</button>
         </div>
-        <ng-template pTemplate="footer">
-            <p-button (click)="displayModal=false" label="Cancel" styleClass="p-button-text"></p-button>
-            <p-button (click)="displayModal=false" label="Add" styleClass="p-button-text add"></p-button>
-        </ng-template>
-    </p-dialog>
-<!-- Dialouge Box ends -->
+        <div>
+            <img src="assets/images/logo.png" alt="logo" class="img">
+        </div>
+    </div>
+    
+    <!-- Card Listing -->
     <div class="body-content">
-        <p>Select Car Family Code & VSI Version</p>
+        <p>Select the car family code and VSI version</p>
         <div class="cards">
-            <div class="card" *ngFor="let product of productList">
-                <div class="card-body align-items-center d-flex justify-content-center" (click)="move(product)" 
+            <div class="card" *ngFor="let product of datasList;let i=index;">
+                <div class="card-body align-items-center d-flex justify-content-center" (click)="move()" 
                 [ngStyle]="{'cursor':product.selectedValue == 'VSI Version #' ? '':'pointer'}">
-                    {{product.name}}
+                    {{product.cfc}}
                 </div>
 
                 <div class="dropdown">
@@ -45,10 +27,37 @@
                         <i class="fa fa-caret-down icon" [ngStyle]="{'transform':product.selectedValue == 'VSI Version #' ? 'translateX(63px)':'translateX(36px)'}"></i>
                     </div>
                     <div class="dropdown-list" *ngIf="product.viewValue">
-                        <div class="dropdown-list__item" *ngFor="let sel of product.select" (click)="changeValue(product,sel)">{{sel.option}}</div>
+                        <div class="dropdown-list__item" *ngFor="let sel of product.vesrsions" (click)="changeValue(product,sel,i)">{{sel.vsi_version}} | {{sel.release_date}}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<p-dialog header="Add Car Family Code" [(visible)]="displayModal" [modal]="true" [style]="{width: '41vw'}"
+[draggable]="false" [resizable]="false">
+    <!-- <form action=""> -->
+        <div class="content-section">
+            <mat-form-field class="full-width">
+                <mat-label>Please enter a new car family code</mat-label>
+                <input matInput maxlength="4" [(ngModel)]="carCode" (ngModelChange)="showVal(carCode)" autocomplete="off">
+            </mat-form-field>
+            <!-- <p>Please enter a new car family code</p>
+            <input type="text" pInputText />  -->
+            <div class="max-char">
+                <div class="max-icon" [ngStyle]="{'backgroundColor' :validate ? 'green':''}">
+                    <span class="pi pi-check"></span>
+                </div>
+                <div class="text">
+                    Maximum 4 char
+                </div>
+            </div>
+        </div>
+    <!-- </form> -->
+  
+    <ng-template pTemplate="footer">
+        <p-button (click)="displayModal=false" label="Cancel" styleClass="p-button-text"></p-button>
+        <p-button (click)="add()" label="Add" styleClass="p-button-text add" [disabled]="!validate"></p-button>
+    </ng-template>
+</p-dialog>

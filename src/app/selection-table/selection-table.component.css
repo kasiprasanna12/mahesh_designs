@@ -1,0 +1,10 @@
+.main-containers{
+    position: relative;
+    padding-bottom: 50px;
+    font-family: "Toyota Type";
+    width: calc(100% - 43px);
+}
+
+.result{
+    margin: 0 20px;
+  }

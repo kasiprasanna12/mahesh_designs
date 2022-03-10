@@ -21,19 +21,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { EntryComponent } from './entry/entry.component';
 import { VSIListComponent } from './vsi-list/vsi-list.component';
 import { MainContainerComponent } from './main-container/main-container.component';
+import { SelectionTableComponent } from './selection-table/selection-table.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/entry', pathMatch: 'full' },
-  { path: 'entry', component: EntryComponent }
-  // {
-  //   path: 'main', component: MainContainerComponent, children: [
-  //     { path: '', redirectTo: 'vsi-list', pathMatch: 'prefix' },
-  //     { path: 'entry', component: EntryComponent },
-  //     { path: 'vsi-list', component: VSIListComponent },
-      
-  //   ]
-  // },
+  { path: '', redirectTo: '/vsi-list', pathMatch: 'full' },
+  // { path: 'entry', component: EntryComponent },
+  { path: 'vsi-list', component: VSIListComponent },
+  { path: 'entry', component: EntryComponent,children:[
+    { path: '', redirectTo: 'main/:id', pathMatch: 'full' },
+    { path: 'main/:id/:index',component:MainContainerComponent},
+    { path: 'selection',component:SelectionTableComponent}
+  ] },
 ];
 
 @NgModule({

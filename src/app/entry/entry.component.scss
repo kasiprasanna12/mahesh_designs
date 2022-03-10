@@ -2,12 +2,15 @@
 @import '../../assets/settings/breakpoints';
 @import '../../assets/settings/mediaquery';
 @import '../../assets/settings/mixins';
-
-
-.main-container{
-    position: relative;
-    // z-index: 1;
-    padding-bottom: 50px;
-    font-family: "Toyota Type";
-    width: calc(100% - 43px);
+.container-content{
+    height: 100%;
 }
+// .head{
+//     width: calc(100% - 43px);
+// }
+// .main-containers{
+//     position: relative;
+//     padding-bottom: 50px;
+//     font-family: "Toyota Type";
+//     width: calc(100% - 43px);
+// }
