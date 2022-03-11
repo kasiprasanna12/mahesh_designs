@@ -3,26 +3,40 @@
 </div>
 <h5>Upload VSI / Set Matrix</h5>
 <!-- Stepper -->
-<div class="step-wizard">
-    <div class="step-wizard-list">
-        <div class="step-wizard-item" [ngClass]="count == 0? 'current-item':''">
-            <span class="progress-label">Select Car Family Code</span>
-            <span class="progress-count"></span>
+
+<div class="stepper-card">
+    <div class="stepper-card__supporting-text">
+  
+      <div class="stepper-horizontal-alternative">
+        <div class="stepper-step step-done" [ngClass]="stepper.cfc =='' ? '':'active-step'">
+            <div class="stepper-title">Select Car Family Code</div>
+          <div class="stepper-circle"><span>1</span></div>
+          <div class="stepper-bar-left"></div>
+          <div class="stepper-bar-right"></div>
         </div>
-        <div class="step-wizard-item" [ngClass]="count == 1? 'current-item':''">
-            <span class="progress-label">Enter Version</span>
-            <span class="progress-count"></span>
+        <div class="stepper-step step-done" [ngClass]="stepper.version ==''? '':'active-step'">
+            <div class="stepper-title">Enter Version</div>
+          <div class="stepper-circle"><span>2</span></div>
+          <div class="stepper-bar-left"></div>
+          <div class="stepper-bar-right"></div>
         </div>
-        <div class="step-wizard-item" [ngClass]="count == 2? 'current-item':''">
-            <span class="progress-label">Select Document</span>
-            <span class="progress-count"></span>
+        <div class="stepper-step step-done" [ngClass]="stepper.document =='' ? '':'active-step'">
+            <div class="stepper-title">Select Document</div>
+          <div class="stepper-circle"><span>3</span></div>
+          <div class="stepper-bar-left"></div>
+          <div class="stepper-bar-right"></div>
         </div>
-        <div class="step-wizard-item" [ngClass]="count == 3? 'current-item':''">
-            <span class="progress-label">Validate and upload</span>
-            <span class="progress-count"></span>
+        <div class="stepper-step step-done">
+          <div class="stepper-title">Validate & Upload</div>
+          <div class="stepper-circle"><span>4</span></div>
+          <div class="stepper-bar-left"></div>
+          <div class="stepper-bar-right"></div>
         </div>
+      </div>
+  
     </div>
-</div>
+  
+  </div>
 
 <div class="wrapper">
 <!-- CFC Dropdown -->
@@ -31,70 +45,97 @@
         you want to upload the files to and then proceed.</p>
     <div class="dropdown">
         <div class="dropdown-select d-flex justify-content-space-between" (click)="change()">
-            Select Car Family Code
+            {{selectedCfc}}
             <i class="fa fa-caret-down icon"></i>
         </div>
         <div class="dropdown-list" *ngIf="dropdown">
-            <div class="dropdown-list__item" (click)="select('787W')">787W</div>
-            <div class="dropdown-list__item" (click)="select('787W')">885W</div>
-            <div class="dropdown-list__item" (click)="select('787W')">886W (HV)</div>
-            <div class="dropdown-list__item" (click)="select('787W')">903W</div>
-            <div class="dropdown-list__item" (click)="select('787W')">807W</div>
+            <div class="dropdown-list__item" *ngFor="let value of cfcList" (click)="select(value)">{{value}}</div>
         </div>
     </div> 
+    <div class="left-btn">
+        <button type="button" (click)="back()" *ngIf="count >=1">Back</button>
+    </div>
+    <div class="right-btn" >
+        <button type="button" (click)="next()" class="enableBtn"
+        *ngIf="selectedInput != ''">Next</button>
+        <button type="button" class="disableBtn" 
+        *ngIf="selectedInput == ''">Next</button>
+    </div>
 </div>
 
 
 <!-- Version Input -->
 <div *ngIf="count == 1">
 <p>Please enter the version you want to upload you VSI and Set matrix to</p>
-<div class="dropdown">
-    <div class="input-icon-wrap">
-        <input type="text" class="input-with-icon" placeholder="Version Input...">
-        <span class="input-icon">
-            <i class="fa fa-caret-down"></i>
-        </span>
-      </div>  	
-</div> 
+<form [formGroup]="versionForm">
+    <div class="dropdown">
+        <div class="input-icon-wrap">
+            <input type="text" class="input-with-icon" placeholder="Version Input..." formControlName="versionControl" #itemName>
+            <span class="input-icon">
+                <i class="fa fa-caret-down"></i>
+            </span>
+          </div>  	
+    </div>
+</form>
+<div class="left-btn">
+    <button type="button" (click)="back()" *ngIf="count >=1">Back</button>
+</div>
+<div class="right-btn" >
+    <button type="button" (click)="cfcBtn()" class="enableBtn"
+    *ngIf="itemName.value != ''">Next</button>
+    <button type="button" class="disableBtn" 
+    *ngIf="itemName.value == ''">Next</button>
+</div>
+ 
 </div>
 
 
 <!-- Browse DOcuments -->
 <div *ngIf="count == 2">
-    <p>Please select the document you want to upload</p>
-<div class="card first">
-    <div class="file-name">VSI</div>
-    <div class="browse">
-        <div class="file">
-            <span>{{isHovering?'Drop the file here':'Drag and Drop File'}}</span>
-            <span>or</span>
-            <span><button type="button" for="file" align="right" (change)="browse($event)">Browse
-               <input type="file" multiple   accept="application/pdf,application/msword,
-               application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
-            </button></span>
+<p>Please select the document you want to upload</p>
+
+    <div class="card" [ngClass]="vsiFile ? 'second':'first'">
+        <div class="file-name">VSI</div>
+        <div class="browse">
+            <div class="file">
+                <span className="fileName" >{{vsiFile?vsiFile.name:'Drag and Drop File'}}</span>
+                <span>or</span>
+                <span><button type="button" for="file" align="right" >Browse
+                   <input type="file" multiple  #vsiControl (change)="readVsiFile($event)"/>
+                </button></span>
+            </div>
+        </div>
+        <div class="alert-icon">
+            <i  [ngClass]="vsiFile ? 'fa-solid fa-circle-check':'fa-solid fa-clock'"></i>
         </div>
     </div>
-    <div class="alert-icon">
-        <i class="fa-solid fa-clock"></i>
+    
+    <div class="card" [ngClass]="metrixFile !='' ? 'second':'first'">
+        <div class="file-name">Set Matrix</div>
+        <div class="browse">
+            <div class="file">
+                <span>{{metrixFile ? metrixFile.name:'Drag and Drop File'}}</span>
+                <span>or</span>
+                <span><button type="button" for="file" align="right" >Browse
+                   <input type="file" multiple  #metrixControl (change)="readSetMatrixFile($event)"/>
+                </button></span>
+            </div>
+        </div>
+        <div class="alert-icon">
+            <i  [ngClass]="metrixFile ? 'fa-solid fa-circle-check':'fa-solid fa-clock'"></i>
+        </div>
     </div>
+
+<div class="left-btn">
+    <button type="button" (click)="back()" *ngIf="count >=1">Back</button>
+</div>
+<div class="right-btn" >
+    <button type="button" class="enableBtn"
+    *ngIf="vsiFile != '' && metrixFile != ''" (click)="fork()">Next</button>
+    <button type="button" class="disableBtn" 
+    *ngIf="vsiFile == '' || metrixFile == ''">Next</button>
 </div>
 
-<div class="card second">
-    <div class="file-name">Set Matrix</div>
-    <div class="browse">
-        <div class="file">
-            <span>{{isHovering?'Drop the file here':'Drag and Drop File'}}</span>
-            <span>or</span>
-            <span><button type="button" for="file" align="right" (change)="browse($event)">Browse
-               <input type="file" multiple   accept="application/pdf,application/msword,
-               application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
-            </button></span>
-        </div>
-    </div>
-    <div class="alert-icon">
-        <i class="fa-solid fa-circle-check"></i>
-    </div>
-</div>
 </div>
 
 
@@ -147,14 +188,15 @@
         </tr>
     </tbody>
 </table>
-</div>
-</div> 
-
 <div class="left-btn">
     <button type="button" (click)="back()" *ngIf="count >=1">Back</button>
 </div>
-<div class="right-btn">
-    <button type="button" (click)="next()" class="enableBtn" >{{count == 3 ? 'Restart':'Next'}}</button>
+<div class="right-btn" >
+    <button type="button" class="enableBtn" (click)="next()">Restart</button>
 </div>
+</div>
+</div> 
+
+
 
   

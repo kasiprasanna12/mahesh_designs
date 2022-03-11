@@ -22,9 +22,10 @@
         padding: 20px 0;
         align-items: center;
         h4{
-            font-size: 18px;
+            font-size: 15px;
             color:$color-black;
             font-family: "Toyota Type";
+            font-weight: 500;
             @include mq-breakpoint-xxl{
                 font-size: 22px;
             }
@@ -38,7 +39,7 @@
                     padding: 0px 40px;
                     display: flex;
                     align-items: center;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: normal;
                     height: 40px;
                 }
@@ -46,12 +47,16 @@
         }
     }
     ::ng-deep{
+        
         .p-datatable .p-datatable-thead > tr > th{
-            font-size: 17px;
+            font-size: 15px;
             color: $color-black;
             font-family: "Toyota Type";
             font-weight: 600;
-            padding: 1rem 0.2rem;
+            // padding: 1rem 0.2rem;
+            padding: 0.4rem 0.6rem;
+            border: 1px solid lavender;
+            background-color: #FFFFFF;
             @include mq-breakpoint-xxl{
                 font-size: 20px;
                 padding: 1rem;
@@ -61,11 +66,15 @@
                 color: $color-grey-light;
             }
         }
+        .p-datatable .p-datatable-thead > tr >th:last-child{
+            border-right: none;
+        }
         .p-datatable .p-datatable-tbody > tr > td{
-            font-size: 16px;
+            font-size: 13px;
             color: $color-black;
             font-family: "Toyota Type";
-            padding: 1rem 0.2rem;
+            padding: 0 0.6rem;
+            border: 1px solid lavender;
             @include mq-breakpoint-xxl{
                 font-size: 20px;
                 padding: 1rem;
@@ -236,4 +245,8 @@
     .p-sidebar-mask.p-component-overlay{
         background: none;
     }  
+}   
+
+tr:nth-child(odd) {
+    background-color: #f7f7f7;
 }

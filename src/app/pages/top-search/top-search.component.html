@@ -15,7 +15,7 @@
          <p-dropdown [options]="fuel" [placeholder]="fuelIndex" optionLabel="" [showClear]="true" [(ngModel)]="fuelValue"
          (onChange)="select()"></p-dropdown>
       </div>
-      <div class="item">
+      <div class="item" *ngIf="semicom.length">
          <div class="label">Semi-Com</div>
          <p-dropdown [options]="semicom" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="semiValue"
          (onChange)="select()"></p-dropdown>
@@ -30,8 +30,8 @@
          <p-dropdown [options]="engine" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="engineValue"
          (onChange)="select()"></p-dropdown>
       </div>
-      <div class="item">
-         <div class="label">Whl Base</div>
+      <div class="item" *ngIf="wheelBase.length > 1">
+         <div class="label" >Whl Base</div>
          <p-dropdown [options]="wheelBase" placeholder="All" optionLabel="" [showClear]="true" [(ngModel)]="baseValue"
          (onChange)="select()"></p-dropdown>
       </div>

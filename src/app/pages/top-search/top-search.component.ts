@@ -237,9 +237,7 @@ export class TopSearchComponent implements OnInit {
         )
         this.engine = this.engine.filter((elem: any, index: any, self: any) => {
           return index === self.indexOf(elem)
-        })
-
-        //wheelBase
+        })//wheelBase
         this.katashikiList.forEach(
           (e: any) => {
             this.wheelBase.push(e['wheel_base']);
@@ -248,7 +246,6 @@ export class TopSearchComponent implements OnInit {
         this.wheelBase = this.wheelBase.filter((elem: any, index: any, self: any) => {
           return index === self.indexOf(elem)
         })
-
         // steeringWheel
         this.katashikiList.forEach(
           (e: any) => {

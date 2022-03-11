@@ -16,124 +16,6 @@ p{
   opacity: 1;
 }
 
-.step-wizard {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.step-wizard-list{
-  // background: #fff;
-  // box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-  // color: #333;
-  list-style-type: none;
-  border-radius: 10px;
-  display: flex;
-  // padding: 20px 10px;s
-  position: relative;
-  z-index: 10;
-}
-
-.step-wizard-item{
-  padding: 0 20px;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -ms-flex-positive:1;
-  flex-grow: 1;
-  // max-width: 100%;
-  display: flex;
-  flex-direction: column; 
-  text-align: center;
-  // min-width: 170px;
-  position: relative;
-}
-.step-wizard-item + .step-wizard-item:after{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50px;
-  // background: #21d4fd;
-  background: #CECECE;
-  width: 100%;
-  height: 2px;
-  transform: translateX(-50%);
-  z-index: -10;  
-}
-.progress-count{
-  height: 40px;
-  width:40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: 600;
-  margin: 0 auto;
-  position: relative;
-  z-index:10;
-  color: transparent;
-}
-.progress-count:after{
-  content: "";
-  height: 20px;
-  width: 20px;
-  // background: #21d4fd;
-  background: #CECECE;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -10;
-}
-.progress-count:before{
-  content: "";
-  height: 5px;
-  width: 10px;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -60%) rotate(-45deg);
-  transform-origin: center center;
-}
-.progress-label{
-  font-size: 12px;
-  // font-weight: 600;
-  margin-bottom: 10px;
-  color: #707070;
-  width: 140px;
-}
-// .current-item .progress-count:before,
-// .current-item ~ .step-wizard-item .progress-count:before{
-//   display: none;
-// }
-.current-item .step-wizard-item + .step-wizard-item:after{
-  color: #068022;
-}
-
-.current-item ~ .step-wizard-item .progress-count:after{
-  background: #CECECE 0% 0% no-repeat padding-box;  
-  opacity: 1;
-}
-// .current-item ~ .step-wizard-item .progress-count:after{
-//   height:10px;
-//   width:10px;
-// }
-.current-item ~ .step-wizard-item .progress-label{
-  opacity: 0.5;
-}
-
-  // .current-item .progress-count:after{
-  //   background: #fff;
-  //   border: 2px solid #21d4fd;
-  // }
-// .current-item .progress-count{
-//   color: #068022;
-// }
-.current-item .progress-count:after{
-  background: #068022;
-}
 .dropdown {
   position: relative;
   // height: 200px;
@@ -203,7 +85,10 @@ div.dropdown-list__item:last-child {
 }
 
 
-.left-btn { float: left; }
+.left-btn { 
+  float: left;
+  margin-top: 20px;
+}
 
 .left-btn button{
   text-align: left;
@@ -216,6 +101,7 @@ div.dropdown-list__item:last-child {
 
 .right-btn{
   float: right;
+  margin-top: 20px;
 }
 
 .right-btn .disableBtn{
@@ -319,7 +205,21 @@ div.dropdown-list__item:last-child {
  letter-spacing: 0px;
  color: #58595B;
  opacity: 1;
+//  width:150px;
 } 
+
+.file span:first-child{
+  margin-right: 20px;
+  font: normal normal normal 14px/37px Toyota Type;
+  letter-spacing: 0px;
+  color: #58595B;
+  opacity: 1;
+  width:150px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+ } 
 
 .file button {
   background: #d7181e 0% 0% no-repeat padding-box;
@@ -340,6 +240,10 @@ div.dropdown-list__item:last-child {
   // display: block;
 }
 
+.card{
+  margin: 20px 0;
+}
+
 .second{
   width: 100%;
   background: #CFE8D5 0% 0% no-repeat padding-box;
@@ -349,7 +253,6 @@ div.dropdown-list__item:last-child {
   border: none;
   display: flex;
   flex-direction: row;
-  margin: 20px 0;
 }
 
 .table {
@@ -380,5 +283,143 @@ div.dropdown-list__item:last-child {
 
 .deny .fa-xmark{
   margin-right: 5px;
+}
+
+
+/* Stepper CSS */
+
+.stepper-card {
+  // width: 550px;
+  min-height: 0;
+  margin: 10px auto;
+}
+
+.stepper-card__supporting-text {
+  width: 100%;
+  padding: 0;
+}
+
+.stepper-horizontal-alternative .stepper-step {
+  width: 25%;
+}
+
+
+/* Begin actual stepper css styles */
+
+.stepper-horizontal-alternative {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stepper-horizontal-alternative .stepper-step {
+  display: table-cell;
+  position: relative;
+  padding: 24px;
+}
+
+.stepper-horizontal-alternative .stepper-step:active {
+  border-radius: 15% / 75%;
+}
+
+.stepper-horizontal-alternative .stepper-step:first-child:active {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.stepper-horizontal-alternative .stepper-step:last-child:active {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.stepper-horizontal-alternative .stepper-step:first-child .stepper-bar-left,
+.stepper-horizontal-alternative .stepper-step:last-child .stepper-bar-right {
+  display: none;
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-circle {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  background-color: #9E9E9E;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2em;
+  font-size: 12px;
+  color: white;
+}
+
+.stepper-horizontal-alternative .stepper-step.active-step .stepper-circle {
+  background-color: #068022
+}
+
+.stepper-horizontal-alternative .stepper-step.step-done .stepper-circle:before {
+  content: "\2714";
+}
+
+.stepper-horizontal-alternative .stepper-step.step-done .stepper-circle *,
+.stepper-horizontal-alternative .stepper-step.editable-step .stepper-circle * {
+  display: none;
+}
+
+.stepper-horizontal-alternative .stepper-step.editable-step .stepper-circle {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.stepper-horizontal-alternative .stepper-step.editable-step .stepper-circle:before {
+  content: "\270E";
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-title {
+  margin-top: 16px;
+  // font-size: 14px;
+  // font-weight: normal;
+  font: normal normal normal 14px/27px Segoe UI;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-title{
+  text-align: center;
+  font: normal normal normal 14px/27px Segoe UI;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+.stepper-horizontal-alternative .stepper-step .stepper-optional {
+  font-size: 12px;
+}
+
+.stepper-horizontal-alternative .stepper-step.active-step .stepper-optional {
+  color: rgba(0, 0, 0, .54);
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-bar-left,
+.stepper-horizontal-alternative .stepper-step .stepper-bar-right {
+  position: absolute;
+  top: 80px;
+  height: 1px;
+  border-top: 1px solid #BDBDBD;
+}
+
+.stepper-horizontal-alternative .stepper-step.active-step  .stepper-bar-left,
+.stepper-horizontal-alternative .stepper-step.active-step .stepper-bar-right{
+  border-top: 1px solid#068022;
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-bar-right {
+  right: 0;
+  left: 50%;
+  margin-left: 20px;
+}
+
+.stepper-horizontal-alternative .stepper-step .stepper-bar-left {
+  left: 0;
+  right: 50%;
+  margin-right: 20px;
 }
 

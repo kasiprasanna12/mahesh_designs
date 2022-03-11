@@ -23,6 +23,7 @@ export class VSIListComponent implements OnInit {
   uniqueCfc: any;
   selectedVSI: any = 'VSI Version #';
   selectedIndex:any;
+  cfcAddError: string = "";
   constructor(private router: Router,
               private service:UserService,
               private dialog:MatDialog,
@@ -117,11 +118,12 @@ export class VSIListComponent implements OnInit {
     }
     this.service.createCFC(postData).subscribe(
       (res:any)=>{
-        console.log(res)
+        this.ngOnInit();
+        this.displayModal = false;
+        this.cfcAddError = "";
       },
-      err=>{
-        console.log(err)
-        this.displayModal=false
+      err => {
+        this.cfcAddError = err.error.message;
       }
     )
   }

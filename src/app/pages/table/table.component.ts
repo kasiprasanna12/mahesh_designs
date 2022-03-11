@@ -6,6 +6,7 @@ import { MatrixDialogComponent } from 'src/app/matrix-dialog/matrix-dialog.compo
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/user.service';
+import { ToyotaConstant } from 'src/app/vsi-list/toyota.model';
 
 interface City {
   name: string
@@ -25,6 +26,7 @@ export class TableComponent implements OnInit {
   checked: boolean = false;
   myselection: any;
   vehicleConfigiration: any;
+  // toyotaConstant!:ToyotaConstant
   constructor(private customerService: CustomerService,
     public userService: UserService,
     public dialog: MatDialog,
@@ -60,7 +62,7 @@ export class TableComponent implements OnInit {
     })
   }
   getvehicleConfiguration(typeList: any) {
-    let AllList = ['A', 'B', 'D', 'E', 'G', 'J', 'K', 'L', 'N', 'P', 'R', 'T', 'U']    
+    let AllList = ['A', 'B', 'D', 'E', 'G', 'J', 'K', 'L', 'N', 'P', 'R', 'T', 'U']
     this.userService.getvehicleConfigurationData(this.userService.selectedBuild).subscribe((data: any) => {
       console.log(data)
       this.vehicleConfigiration = []
@@ -84,5 +86,9 @@ export class TableComponent implements OnInit {
       })
       console.log(this.vehicleConfigiration)
     })
+  }
+
+  checkObject(data: any) {
+    return Object.keys(data).length ? true : false
   }
 }

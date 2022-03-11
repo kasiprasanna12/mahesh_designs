@@ -46,6 +46,10 @@ import { MatrixDialogComponent } from './matrix-dialog/matrix-dialog.component';
 import { SelectionTableComponent } from './selection-table/selection-table.component';
 import { FileDropDirective } from './pages/upload-vsi/file-drop.directive';
 import { FilterPipe } from './pages/compare-results/filter.pipe';
+// import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { SwiperModule, SwiperConfigInterface,
+  SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { ConstantPipe } from './constant.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +71,7 @@ import { FilterPipe } from './pages/compare-results/filter.pipe';
     SelectionTableComponent,
     FileDropDirective,
     FilterPipe,
+    ConstantPipe,
     // ProductListComponent,
     // ProductDetailsComponent,
   ],
@@ -91,7 +96,9 @@ import { FilterPipe } from './pages/compare-results/filter.pipe';
     NgbModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    // NgxUsefulSwiperModule,
+    SwiperModule
   ],
   providers: [CustomerService,DatePipe],
   bootstrap: [AppComponent]

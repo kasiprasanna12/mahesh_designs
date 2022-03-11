@@ -1,6 +1,5 @@
 @import "assets/settings/color-palette";
 /* You can add global styles to this file, and also import other style files */
-
 html,
 body {
   height: 100%;
@@ -20,8 +19,13 @@ a {
 @font-face {
   font-family: "Toyota Type Semibold";
   src: local("Toyota Type Semibold"),
-    url(./assets/fonts/ToyotaType-Semibold.ttf) format("truetype");
-    
+    url(./assets/fonts/ToyotaType-Semibold.ttf) format("truetype");  
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"),
+    url(./assets/fonts/SegoeUI.ttf) format("truetype");  
 }
 
 .mat-tab-label {
