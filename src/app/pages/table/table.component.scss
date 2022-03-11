@@ -47,7 +47,11 @@
         }
     }
     ::ng-deep{
-        
+        .p-datatable .p-datatable-header{
+            background:none;
+            text-align: right;
+            padding: 1rem 0rem 1rem 1rem;
+        }
         .p-datatable .p-datatable-thead > tr > th{
             font-size: 15px;
             color: $color-black;
@@ -62,8 +66,10 @@
                 padding: 1rem;
             }
             i{
-                font-size: 25px;
+                font-size: 18px;
                 color: $color-grey-light;
+                text-align: left;
+                margin: 0;
             }
         }
         .p-datatable .p-datatable-thead > tr >th:last-child{
