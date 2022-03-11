@@ -12,11 +12,12 @@
     align-items: stretch;
     width: 90%;
     flex-wrap: wrap;
+   
     .item{
         border:1px solid $color-grey;
-        width: 23%;
+        width: 93%;
         padding: 20px;
-        margin: 1%;
+        margin: 1% 1% 5% 1%;
         background: $color-white;
         &:hover{
             box-shadow: 7px 11px 21px -3px rgba(0,0,0,0.31);
@@ -54,7 +55,14 @@
             display: block;
         }
     }
-
+    ::ng-deep{
+        .p-carousel .p-carousel-indicators{
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+        .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+            background-color: #636363;
+        }
+    }
 }
 
 
@@ -79,3 +87,10 @@ swiper{
     height: 400px;
     width: 600px;
 }
+
+.carousel-item {
+    &.active, &.carousel-item-right, &.carousel-item-next {
+      display: flex !important;
+      flex-wrap: wrap
+    }
+  }

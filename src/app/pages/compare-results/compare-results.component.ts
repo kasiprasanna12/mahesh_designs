@@ -5,6 +5,10 @@ import { filter, keys } from 'lodash';
 import { KataShiki } from 'src/app/classes/katashiki';
 import { UserService } from 'src/app/user.service';
 
+//
+import { ProductService } from './productservice';
+import {Product} from './product';
+
 @Component({
   selector: 'compare-results',
   templateUrl: './compare-results.component.html',
@@ -33,9 +37,15 @@ export class CompareResultsComponent implements OnInit {
   numberOfPages = 1;
   showCompareResults = false;
 
+
+//
+products: Product[] | any;
+responsiveOptions : any [];
+
   constructor(
     private router: Router,
-    private service: UserService) {
+    private service: UserService,
+    private productService: ProductService) {
       this.service.$onchangeOfCarfamily.subscribe((data:any)=>{
         // alert(data)
         this.katashikiList  = []
@@ -43,11 +53,35 @@ export class CompareResultsComponent implements OnInit {
         this.getAPIData()
       })
 
+
+
+      this.responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+
   }
 
   ngOnInit(): void {
     // alert('bottom'+ this.versionID)
-    this.getAPIData()
+    this.getAPIData();
+
+    this.productService.getProductsSmall().then(products => {
+			this.products = products;
+		});
   }
 
   getAPIData() {

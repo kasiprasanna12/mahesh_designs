@@ -50,6 +50,9 @@ import { FilterPipe } from './pages/compare-results/filter.pipe';
 import { SwiperModule, SwiperConfigInterface,
   SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { ConstantPipe } from './constant.pipe';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ProductService } from './pages/compare-results/productservice';
+import {CarouselModule} from 'primeng/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,9 +101,11 @@ import { ConstantPipe } from './constant.pipe';
     MatInputModule,
     MatFormFieldModule,
     // NgxUsefulSwiperModule,
-    SwiperModule
+    SwiperModule,
+    CarouselModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [CustomerService,DatePipe],
+  providers: [CustomerService,DatePipe, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

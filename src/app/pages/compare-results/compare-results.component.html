@@ -1,4 +1,66 @@
 <div class="compare-results-section" *ngIf="showCompareResults">
+    <div class="container-fluid">
+        <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item" *ngFor="let vsi of myArray | filter:pageFilter">
+                <div class="item">
+                <div class="head-title">{{vsi.katashiki}}</div>
+                <div class="grid" >
+                    <table >
+                        <tr *ngIf="vsi['semi-complete']">
+                            <td>Semi-Com</td>
+                            <td>:</td>
+                            <td>{{vsi['semi-complete']}}</td>
+                        </tr>
+                        <tr *ngIf="vsi.drive_train">
+                            <td>DV Train</td>
+                            <td>:</td>
+                            <td>{{vsi.drive_train}}</td>
+                        </tr>
+                        <tr *ngIf="vsi.engine">
+                            <td>Engine</td>
+                            <td>:</td>
+                            <td>{{vsi.engine}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.wheel_base">
+                            <td>Whl Base</td>
+                            <td>:</td>
+                            <td>{{vsi.wheel_base}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.steering_wheel"> 
+                            <td>Strg Whl</td>
+                            <td>:</td>
+                            <td>{{vsi.steering_wheel}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.deck">
+                            <td>Deck</td>
+                            <td>:</td>
+                            <td>{{vsi.deck}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.body">
+                            <td>Body</td>
+                            <td>:</td>
+                            <td>{{vsi.body}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.transmission">
+                            <td>T/M</td>
+                            <td>:</td>
+                            <td>{{vsi.transmission}}</td>
+                        </tr>
+                        <tr  *ngIf="vsi.grade">
+                            <td>Grade</td>
+                            <td>:</td>
+                            <td>{{vsi.grade}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <button class="primary" type="button" (click)="selectbuild(vsi)">Select &#38; Build</button>
+            </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>
+
+<!-- <div class="compare-results-section" *ngIf="showCompareResults">
     <div class="item" *ngFor="let vsi of myArray | filter:pageFilter">
         <div class="head-title">{{vsi.katashiki}}</div>
         <div class="grid" >
@@ -58,4 +120,7 @@
     <i class="fa-solid fa-angle-left" (click)="previous()"></i>
     {{this.totalCount}}
     <i class="fa-solid fa-angle-right" (click)="next()"></i>
-</div>
+</div> -->
+
+
+
