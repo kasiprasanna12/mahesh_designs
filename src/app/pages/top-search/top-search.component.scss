@@ -31,6 +31,11 @@
                 min-width: 180px;
             }
             ::ng-deep{
+                input{
+                    width: 100%;
+                    border:1px solid #ced4da;
+                    height: 32px;
+                }
                 .p-dropdown{
                     width: 100%;
                     .p-dropdown-clear-icon{

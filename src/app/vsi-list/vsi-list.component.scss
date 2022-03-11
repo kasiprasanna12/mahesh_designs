@@ -4,6 +4,14 @@
 @import "../../assets/settings/buttons";
 @import "../../assets/font-awesome/css/font-awesome.css";
 
+::ng-deep{
+  .p-dialog,.p-dialog
+  .mat-dialog-container{
+    max-height: 560px !important;
+    min-height: 560px !important;
+  }
+}
+
 .image-content {
   display: flex;
   justify-content: space-between;
@@ -111,6 +119,7 @@ img {
 }
 .icon {
   font-size: 18px;
+  width:25px;
 }
 .dropdown-list__item {  
   font-size: 10px;
