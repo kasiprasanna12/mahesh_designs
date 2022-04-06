@@ -1,0 +1,51 @@
+.main-containers {
+  position: relative;
+  padding-bottom: 50px;
+  font-family: "Toyota Type";
+  width: calc(100% - 43px);
+}
+
+.result {
+  margin: 0 20px;
+}
+::ng-deep {
+  .mat-dialog-container {
+    padding: 20px;
+  }
+}
+.dialog-content {
+  min-width: 200px;
+  height: 250px;
+  padding-right: 20px;
+  overflow: auto;
+}
+h5 {
+  font-weight: bold;
+  font-size: 13px;
+}
+.green {
+  color: #289d05;
+}
+.list-box {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      font-size: 11px;
+      padding: 0 0 8px 0px;
+      font-weight: 500;
+      line-height: 18px;
+      span {
+        display: block;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: normal;
+        padding-left: 10px;
+      }
+    }
+  }
+}
